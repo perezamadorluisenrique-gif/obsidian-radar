@@ -92,7 +92,8 @@ const rungDir = p('scripts', 'score-rungs');
 if (fs.existsSync(rungDir)) {
   for (const f of fs.readdirSync(rungDir).filter((x) => /^R\d\.mjs$/.test(x)).sort()) {
     const mod = await import(path.join(rungDir, f));
-    mod.register({ rung, assert, exists, read, p, sh, tmpdir, Skip, ROOT, SKIP_BROWSER });
+    // counts(): how many checks each rung has, so RESULTS.md can be held to the real numbers
+    mod.register({ rung, assert, exists, read, p, sh, tmpdir, Skip, ROOT, SKIP_BROWSER, counts: () => Object.fromEntries([...rungs].map(([id, r]) => [id, r.checks.length])) });
   }
 }
 
