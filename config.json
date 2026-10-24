@@ -23,6 +23,27 @@
   },
   "abandonment": {
     "minDownloads": 10000,
-    "quietDays": 365
+    "quietDays": 365,
+    "minOpenIssues": 5,
+    "weights": {
+      "loved": 40,
+      "quiet": 30,
+      "issues": 30
+    },
+    "lovedSpan": 100,
+    "quietSpanDays": 730,
+    "issuesFull": 100,
+    "topN": 100
+  },
+  "growth": {
+    "topN": 50,
+    "minBase": 200,
+    "minDelta": 20,
+    "trendWeeks": 4,
+    "trendFlat": 0.25,
+    "trendMinRate": 5,
+    "newcomerDays": 90,
+    "orderWindow": 40,
+    "orderPercentile": 0.25
   }
 }

@@ -2,13 +2,16 @@
 // Regenerates the committed test fixtures. Only needed when the fixture design changes.
 //
 //   node scripts/make-fixtures.mjs releases --from <dir with the 3 raw Obsidian files>
+//   node scripts/make-fixtures.mjs snapshots --from <data/snapshots/YYYY-Www.json.gz of a real snapshot>
 //
 // `releases` writes a small, deterministic sample of the real directory to fixtures/releases/.
-// (Snapshot fixtures are produced by tests/helpers/synthetic.mjs; see `snapshots` below once R2 exists.)
+// `snapshots` writes that same sample of a REAL snapshot as fixtures/snapshots/<its week>.json.gz plus a SYNTHETIC
+// previous week, built from fixtures/snapshots/plan.json, so growth tests have two weeks with known answers.
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { loadConfig, ROOT } from '../lib/config.mjs';
+import { readSnapshot, writeSnapshot } from '../lib/snapshot.mjs';
 
 const argv = process.argv.slice(2);
 const what = argv[0];
@@ -41,6 +44,30 @@ if (what === 'releases') {
   }))));
   fs.writeFileSync(path.join(outDir, 'community-plugins-removed.json'), JSON.stringify(removed.slice(0, 12), null, 1));
   console.log(`fixtures/releases: ${ordered.length} plugins`);
+} else if (what === 'snapshots') {
+  const real = readSnapshot(from);
+  const dir = JSON.parse(fs.readFileSync(path.join(ROOT, 'fixtures', 'releases', 'community-plugins.json'), 'utf8'));
+  const plan = JSON.parse(fs.readFileSync(path.join(ROOT, 'fixtures', 'snapshots', 'plan.json'), 'utf8'));
+  const outDir = path.join(ROOT, 'fixtures', 'snapshots');
+  const sample = Object.fromEntries(dir.filter((p) => real.data[p.id]).map((p) => [p.id, real.data[p.id]]));
+  const mk = (week, capturedAt, data, note) => ({
+    schema: 1, week, capturedAt, ...(real.statsUpdated && week === real.week ? { statsUpdated: real.statsUpdated } : {}), plugins: Object.keys(data).length,
+    refresh: { state: 'rolling', transport: 'none', withMeta: 0, pending: Object.keys(data).length, refreshed: 0, limited: false, note }, data,
+  });
+  writeSnapshot(outDir, mk(real.week, real.capturedAt, sample, 'Sample of the real snapshot (ids of fixtures/releases); no GitHub metadata.'));
+  // Synthetic previous week: this week minus a known gain. Unplanned plugins gain up to 0.05% of their total.
+  const gain = (id, dl) => plan.gains[id] ?? Math.floor((dl * (parseInt(hash(id).slice(0, 4), 16) % 100)) / 200000);
+  const prev = {};
+  for (const [id, rec] of Object.entries(sample)) {
+    if (plan.absent.includes(id)) continue;
+    const r = { ...rec, dl: Math.max(0, rec.dl - gain(id, rec.dl)) };
+    if (plan.anomaly[id]) r.dl = rec.dl + plan.anomaly[id];
+    if (plan.prevRel[id]) r.rel = plan.prevRel[id];
+    prev[id] = r;
+  }
+  for (const [id, g] of Object.entries(plan.ghosts)) prev[id] = { dl: g.dl, rel: g.rel };
+  writeSnapshot(outDir, mk(plan.previousWeek, plan.previousCapturedAt, prev, 'SYNTHETIC test week derived from the real sample by scripts/make-fixtures.mjs from fixtures/snapshots/plan.json. Not real data.'));
+  console.log(`fixtures/snapshots: ${real.week} (${Object.keys(sample).length} plugins, real) + ${plan.previousWeek} (${Object.keys(prev).length} plugins, synthetic)`);
 } else if (what === 'graphql-subset') {
   // Prune GitHub's public schema (https://docs.github.com/public/fpt/schema.docs.graphql) down to the
   // fields lib/github.mjs queries, so tests can validate generated queries offline against REAL type definitions.
@@ -74,6 +101,6 @@ if (what === 'releases') {
   fs.writeFileSync(path.join(ROOT, 'fixtures', 'graphql', 'github-subset.graphql'), out);
   console.log(`fixtures/graphql/github-subset.graphql: ${out.length} bytes, ${defs.length} definitions`);
 } else {
-  console.error('usage: make-fixtures.mjs releases|graphql-subset --from <dir>');
+  console.error('usage: make-fixtures.mjs releases|snapshots|graphql-subset --from <dir or file>');
   process.exit(2);
 }

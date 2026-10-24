@@ -1,0 +1,24 @@
+{
+  "_comment": "Plan for the SYNTHETIC previous week fixtures/snapshots/2026-W42.json.gz. It is derived from the real 2026-W43 sample (fixtures/snapshots/2026-W43.json.gz) by `node scripts/make-fixtures.mjs snapshots --from data/snapshots/2026-W43.json.gz`. Tests read this file for their expected values. Everything not listed here gets a small deterministic gain (see make-fixtures.mjs).",
+  "previousWeek": "2026-W42",
+  "previousCapturedAt": "2026-10-17T04:00:00Z",
+  "gains": {
+    "templater-obsidian": 30000,
+    "obsidian-excalidraw-plugin": 24000,
+    "copilot": 18000,
+    "library": 2400,
+    "xminder": 1000,
+    "base-form": 400,
+    "typography-as-you-type": 20,
+    "hybrid-line-numbers": 19,
+    "lac-costset": 10,
+    "heading-guard": 20
+  },
+  "absent": ["book-studio", "claude-studio", "markdown-rss", "simboard"],
+  "ghosts": {
+    "ghost-plugin-a": { "dl": 15000, "rel": "2024-01-01" },
+    "ghost-plugin-b": { "dl": 300, "rel": "2023-05-05" }
+  },
+  "prevRel": { "library": "2026-09-01", "tasknotes": "2026-10-01" },
+  "anomaly": { "dice-rolls": 50 }
+}
