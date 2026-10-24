@@ -3,7 +3,7 @@
 //
 //   node scripts/fetch.mjs [--week 2026-W43] [--out data/snapshots] [--cache data/cache]
 //        [--releases <url|dir>] [--transport graphql|rest|none] [--budget N]
-//        [--graphql-url URL] [--rest-url URL] [--batch N]
+//        [--graphql-url URL] [--rest-url URL] [--batch N] [--no-auth]
 //
 // Env: GITHUB_TOKEN (or GH_TOKEN), RADAR_NOW (pin the clock), RADAR_RELEASES_BASE, RADAR_GRAPHQL_URL, RADAR_REST_URL.
 // A rate limit or missing token never fails the run: progress is saved and the next run continues.
@@ -23,17 +23,18 @@ if (!isWeekId(week)) { console.error(`bad --week ${week}`); process.exit(2); }
 
 const releases = opt('releases', process.env.RADAR_RELEASES_BASE ?? cfg.sources.releasesBase);
 const abs = (p) => (path.isAbsolute(p) ? p : path.join(ROOT, p));
-const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
+const anonymous = argv.includes('--no-auth'); // sandbox proxies that inject credentials themselves
+const token = anonymous ? '' : process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
 const transport = opt('transport', 'graphql');
 const budget = opt('budget') ? Number(opt('budget')) : undefined;
 
 const log = (m) => console.log(`[fetch] ${m}`);
-log(`week ${week}, transport ${transport}${token ? '' : ' (no token)'}, releases from ${releases}`);
+log(`week ${week}, transport ${transport}${token ? '' : anonymous ? ' (proxy-authenticated)' : ' (no token)'}, releases from ${releases}`);
 try {
   const { snapshot, file, stats } = await buildSnapshot({
     week, now, cfg, releases: /^https?:/.test(releases) ? releases : abs(releases),
     snapshotsDir: abs(opt('out', 'data/snapshots')), cacheDir: abs(opt('cache', 'data/cache')),
-    transport, token, budget, log,
+    transport, token, anonymous, budget, log,
     graphqlUrl: opt('graphql-url', process.env.RADAR_GRAPHQL_URL ?? cfg.sources.graphqlUrl),
     restUrl: opt('rest-url', process.env.RADAR_REST_URL ?? cfg.sources.restUrl),
   });

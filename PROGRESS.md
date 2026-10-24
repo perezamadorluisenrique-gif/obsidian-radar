@@ -3,3 +3,4 @@
 One line per session.
 
 - 2026-10-24 session 1: scaffolding (R0): score ladder runner, bookkeeping files, package.json, config. Found real data is 9,385 plugins (not ~3k); the forum IS reachable from the sandbox; GitHub GraphQL is NOT (proxy refuses it).
+- 2026-10-24 session 1 (cont.): R1 done: fetcher (batched GraphQL, REST fallback, rolling refresh, mock GitHub, 18 tests), first real snapshot 2026-W43 (9,385 plugins, downloads + release dates; GitHub metadata pending because the sandbox cannot reach the GitHub API), R1 score rung.

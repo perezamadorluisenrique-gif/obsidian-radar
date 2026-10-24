@@ -1,8 +1,8 @@
 # NEXT
 
 ## Next
-1. R1: scripts/fetch.mjs (directory + stats + GitHub metadata -> data/snapshots/YYYY-Www.json.gz), schema, rolling refresh.
-2. R2: growth + maintainer-wanted analysis. R3: forum gap clustering + ideas.json. R4: site. R5: workflow. R6: docs + RESULTS.md.
+1. R2: growth + maintainer-wanted analysis (lib/growth.mjs, lib/abandonment.mjs, scripts/analyze.mjs, synthetic previous week in fixtures).
+2. R3: forum fetch + gap clustering + ideas.json. R4: site. R5: workflow. R6: docs + RESULTS.md.
 
 ## How to resume
 1. `git checkout claude/charming-bardeen-ptiqqz && git pull`
@@ -11,4 +11,5 @@
 4. Update STATE.md, PROGRESS.md and this file before every commit.
 
 ## Blockers
-- none yet
+- **GitHub API from the build sandbox** (denied, took another route): the proxy refuses `api.github.com/graphql` and REST for repos other than this one. The live GraphQL path is therefore only tested against the real schema + a mock. The first snapshot (2026-W43) is in the documented rolling-refresh state (downloads and release dates complete, GitHub metadata pending). It fills in automatically on the first Actions run, which has a token. See DECISIONS.md "GitHub access in the build sandbox".
+- **Tinta design system**: the brief names no repository for it and none is visible to this session, so the site uses the minimal fallback style (tokens in one CSS file). See DECISIONS.md.
