@@ -120,7 +120,7 @@ export function register({ rung, assert, exists, read, p, sh, tmpdir, ROOT }) {
   });
 
   check('ideas.json is reproducible from the committed snapshots + forum data (same bytes)', () => {
-    if (!exists('data', 'cache', 'directory.json')) return 'skipped: data/cache/directory.json absent (written by scripts/fetch.mjs; CI always has it)';
+    if (!exists('data', 'cache', 'directory.json')) return 'skipped: data/cache/directory.json absent (git-ignored, written by scripts/fetch.mjs; a fresh clone and ci.yml do not have it; the weekly run regenerates ideas.json from live data)';
     const out = tmpdir('r3-ideas');
     sh(`node scripts/analyze.mjs --out ${out}/analysis.json --ideas ${out}/ideas.json`, { env: { RADAR_NOW: '' } });
     assert(fs.readFileSync(`${out}/ideas.json`, 'utf8') === read('ideas.json'), 'regenerating ideas.json gives different bytes: the committed file is stale (run: npm run analyze)');

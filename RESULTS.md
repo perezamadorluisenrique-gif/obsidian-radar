@@ -44,10 +44,9 @@ npm test                                # the 124 unit and integration tests
 node scripts/ci-dry-run.mjs             # the weekly workflow's commands, offline, 44 assertions
 node scripts/ci-dry-run.mjs --browser   # the same plus the Playwright layout check (46)
 node scripts/findings.mjs               # prints the findings block below from the committed data
-node scripts/fetch.mjs --out /tmp/radar-snaps --cache data/cache   # optional, needs network: fills the git-ignored plugin cache so the real-data checks in R4 and R6 run instead of skipping
 ```
 
-The checks that need the plugin directory cache (`data/cache/directory.json`, git-ignored) say `skipped: …` and still pass when it is absent, which is how a fresh clone and CI behave.
+A few checks compare against the real plugin directory as it was when the first snapshot was taken, through the git-ignored cache `data/cache/directory.json` that `scripts/fetch.mjs` writes: R3 (`ideas.json` regenerates to the same bytes), R4 (the real 9,385-plugin site builds, and passes the link and 375 px checks) and R6 (the findings block below). On a fresh clone and in `ci.yml` there is no cache, so they print `skipped: …` and pass; they ran, not skipped, in the build session, and a clean-clone run of the whole ladder (`npm ci`, then `./score`) also ends with every rung passing. If you refresh the cache yourself on a later day the directory will have changed and R3 will rightly ask you to run `npm run analyze` again.
 
 ## First real findings
 
