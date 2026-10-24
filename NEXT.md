@@ -1,8 +1,7 @@
 # NEXT
 
 ## Next
-1. R5: `.github/workflows/weekly.yml` + `scripts/ci-dry-run.mjs` (pipeline against mocks/fixtures; forum step fails gracefully offline) + `scripts/score-rungs/R5.mjs`.
-2. R6: README.md, `scripts/score-rungs/R6.mjs`, RESULTS.md; set STATE.md to done.
+1. R6: README.md (how it works, formulas, limits, how to pause it, how to read ideas.json), `scripts/score-rungs/R6.mjs`, RESULTS.md; set STATE.md to done.
 
 ## How to resume
 1. `git checkout claude/charming-bardeen-ptiqqz && git pull`

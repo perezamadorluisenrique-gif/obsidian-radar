@@ -1,0 +1,100 @@
+# Obsidian Ecosystem Radar: weekly rebuild.
+#
+# Monday 05:41 UTC (or by hand from the Actions tab): fetch -> snapshot -> analyse -> commit the data -> build -> check -> deploy.
+# Safe to re-run: the week's snapshot is overwritten in place, earlier snapshots are never touched, and a run that
+# changes nothing commits nothing (see scripts/commit-data.mjs). Pause it: Actions -> weekly -> "..." -> Disable workflow.
+# Skip only the forum step: set the repository variable RADAR_FORUM to "off" (Settings -> Secrets and variables -> Actions -> Variables).
+name: weekly
+
+on:
+  schedule:
+    - cron: '41 5 * * 1'
+  workflow_dispatch:
+    inputs:
+      skip_forum:
+        description: 'Skip the forum step (use the forum data already committed)'
+        type: boolean
+        default: false
+
+# One run at a time, and never cancel one halfway through writing a snapshot.
+concurrency:
+  group: radar-weekly
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    permissions:
+      contents: write # commit the snapshot, forum data and ideas.json back to the default branch
+    env:
+      DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Rate limits never fail this step: progress is saved in the snapshot and the next run continues (rolling refresh).
+      - name: Fetch directory, stats and GitHub metadata -> data/snapshots/<week>.json.gz
+        run: node scripts/fetch.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.RADAR_GITHUB_TOKEN || secrets.GITHUB_TOKEN }}
+
+      # Optional. The site builds without it, and the step is skipped when RADAR_FORUM is "off".
+      - name: Fetch forum feature requests
+        id: forum
+        if: ${{ vars.RADAR_FORUM != 'off' && github.event.inputs.skip_forum != 'true' }}
+        continue-on-error: true
+        run: node scripts/forum.mjs
+
+      - name: Analyse (growth, maintainers wanted, gaps) -> ideas.json
+        run: node scripts/analyze.mjs --ideas ideas.json
+
+      # The data is the only thing that cannot be rebuilt later, so it is saved before anything that could fail.
+      - name: Commit the data back to ${{ github.event.repository.default_branch }}
+        if: ${{ github.ref_name == github.event.repository.default_branch }}
+        run: node scripts/commit-data.mjs --branch "$GITHUB_REF_NAME"
+
+      - name: Build the site -> dist/
+        run: node scripts/build-site.mjs
+
+      - name: Check links
+        run: node scripts/check-links.mjs dist
+
+      # Needs a browser; it is reported as a warning rather than holding back the weekly refresh.
+      - name: Browser check (no horizontal scroll at 375px, dark mode, search)
+        id: layout
+        continue-on-error: true
+        run: |
+          npm i --no-save --no-audit --no-fund playwright
+          node scripts/check-layout.mjs dist
+
+      - name: Report a failed browser check
+        if: ${{ steps.layout.outcome == 'failure' }}
+        run: echo "::warning title=Browser check failed::The site was still built and deployed; open this run's log for the layout problem."
+
+      - name: Upload the site
+        if: ${{ github.ref_name == github.event.repository.default_branch }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    if: ${{ github.ref_name == github.event.repository.default_branch }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

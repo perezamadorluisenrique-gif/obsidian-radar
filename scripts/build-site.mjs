@@ -8,7 +8,7 @@
 // The output is a pure function of its inputs: building twice gives byte-identical files.
 import fs from 'node:fs';
 import path from 'node:path';
-import { loadConfig, ROOT } from '../lib/config.mjs';
+import { loadConfig, ROOT, WORK } from '../lib/config.mjs';
 import { analyze, ideasFor } from './analyze.mjs';
 import { renderSite } from '../lib/site.mjs';
 import { esScript } from '../lib/i18n.mjs';
@@ -34,7 +34,7 @@ export async function buildSite({ snapshotsDir, directoryFile, forumDir, out, no
 if (import.meta.url === `file://${process.argv[1]}`) {
   const argv = process.argv.slice(2);
   const opt = (n, d) => { const i = argv.indexOf(`--${n}`); return i >= 0 ? argv[i + 1] : d; };
-  const abs = (p) => (path.isAbsolute(p) ? p : path.join(ROOT, p));
+  const abs = (p) => (path.isAbsolute(p) ? p : path.join(WORK, p));
   try {
     const t0 = Date.now();
     const out = abs(opt('out', 'dist'));
@@ -46,7 +46,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     });
     const pages = files.filter((f) => f.endsWith('.html')).length;
     const bytes = files.reduce((s, f) => s + fs.statSync(path.join(out, f)).size, 0);
-    log(`${analysis.week}: ${pages} pages, ${files.length} files, ${(bytes / 1048576).toFixed(1)} MB -> ${path.relative(ROOT, out) || '.'} in ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+    log(`${analysis.week}: ${pages} pages, ${files.length} files, ${(bytes / 1048576).toFixed(1)} MB -> ${path.relative(WORK, out) || '.'} in ${((Date.now() - t0) / 1000).toFixed(1)}s`);
   } catch (e) {
     console.error(`[build] FAILED: ${e.stack || e.message}`);
     process.exit(1);

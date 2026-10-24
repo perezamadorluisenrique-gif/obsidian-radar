@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // Link checker for the built site (dist/). Offline: external links are counted and sanity-checked, never fetched.
 //
-//   node scripts/check-links.mjs [dist]
+//   node scripts/check-links.mjs [dist] [--allow-http host,host]
+//     --allow-http: only for the CI dry run, whose mock forum is served over http://127.0.0.1; the weekly workflow never passes it.
 //
 // Checks, for every .html file:
 //   - every relative href/src resolves to a file in dist (query strings ignored), with no absolute "/path" links
@@ -15,7 +16,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-export function checkLinks(dist) {
+export function checkLinks(dist, { allowHttp = [] } = {}) {
   const problems = [];
   const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(path.join(d, e.name)) : [path.join(d, e.name)]));
   const all = walk(dist).map((f) => path.relative(dist, f).split(path.sep).join('/'));
@@ -41,7 +42,7 @@ export function checkLinks(dist) {
       if (raw === '' || raw.startsWith('data:')) continue;
       if (/^(https?:)?\/\//.test(raw) || raw.startsWith('mailto:')) {
         external++;
-        if (raw.startsWith('http://')) problems.push(`${f}: insecure external link ${raw}`);
+        if (raw.startsWith('http://') && !allowHttp.includes(new URL(raw).hostname)) problems.push(`${f}: insecure external link ${raw}`);
         try { const u = new URL(raw); externalHosts.set(u.host, (externalHosts.get(u.host) ?? 0) + 1); } catch { if (!raw.startsWith('mailto:')) problems.push(`${f}: malformed external link ${raw}`); }
         continue;
       }
@@ -66,9 +67,12 @@ export function checkLinks(dist) {
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  const dist = path.resolve(process.argv[2] ?? 'dist');
+  const argv = process.argv.slice(2);
+  const flag = argv.indexOf('--allow-http');
+  const allowHttp = flag >= 0 ? String(argv[flag + 1] ?? '').split(',').filter(Boolean) : [];
+  const dist = path.resolve(argv.find((a, i) => !a.startsWith('--') && i !== flag + 1) ?? 'dist');
   if (!fs.existsSync(dist)) { console.error(`[links] ${dist} does not exist; run \`npm run build\` first`); process.exit(2); }
-  const r = checkLinks(dist);
+  const r = checkLinks(dist, { allowHttp });
   console.log(`[links] ${r.pages} pages, ${r.files} files, ${r.internal} internal links checked, ${r.external} external links (${Object.keys(r.externalHosts).join(', ') || 'none'}; not fetched)`);
   if (r.problems.length) {
     for (const p of r.problems.slice(0, 40)) console.error(`  ✗ ${p}`);

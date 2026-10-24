@@ -9,7 +9,7 @@
 // A rate limit or missing token never fails the run: progress is saved and the next run continues.
 import fs from 'node:fs';
 import path from 'node:path';
-import { loadConfig, ROOT } from '../lib/config.mjs';
+import { loadConfig, ROOT, WORK } from '../lib/config.mjs';
 import { now as clock, weekId, isWeekId } from '../lib/week.mjs';
 import { buildSnapshot } from '../lib/fetcher.mjs';
 
@@ -22,7 +22,7 @@ const week = opt('week', weekId(now));
 if (!isWeekId(week)) { console.error(`bad --week ${week}`); process.exit(2); }
 
 const releases = opt('releases', process.env.RADAR_RELEASES_BASE ?? cfg.sources.releasesBase);
-const abs = (p) => (path.isAbsolute(p) ? p : path.join(ROOT, p));
+const abs = (p) => (path.isAbsolute(p) ? p : path.join(WORK, p));
 const anonymous = argv.includes('--no-auth'); // sandbox proxies that inject credentials themselves
 const token = anonymous ? '' : process.env.GITHUB_TOKEN || process.env.GH_TOKEN || '';
 const transport = opt('transport', 'graphql');
@@ -40,7 +40,7 @@ try {
   });
   const r = snapshot.refresh;
   const line = `${snapshot.plugins} plugins; GitHub metadata for ${r.withMeta} (${((100 * r.withMeta) / snapshot.plugins).toFixed(1)}%), refreshed ${r.refreshed} this run via ${r.transport}; state=${r.state}`;
-  log(`wrote ${path.relative(ROOT, file)}: ${line}`);
+  log(`wrote ${path.relative(WORK, file)}: ${line}`);
   log(`${stats.batches} GraphQL batches, ${stats.repoLookups} repo lookups, ${stats.gone} repos not found, ${stats.errors} transient errors${r.note ? `\n[fetch] note: ${r.note}` : ''}`);
   if (process.env.GITHUB_STEP_SUMMARY) {
     fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, `### Fetch ${week}\n- ${line}\n- ${stats.repoLookups} repo lookups in ${stats.batches} batches\n${r.note ? `- ${r.note}\n` : ''}`);

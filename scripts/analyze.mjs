@@ -12,7 +12,7 @@
 // "Now" defaults to the capture time of the newest snapshot, so the same snapshots always give the same analysis.
 import fs from 'node:fs';
 import path from 'node:path';
-import { loadConfig, ROOT } from '../lib/config.mjs';
+import { loadConfig, ROOT, WORK } from '../lib/config.mjs';
 import { listSnapshots, readSnapshot } from '../lib/snapshot.mjs';
 import { getJSON } from '../lib/http.mjs';
 import { analyzeGrowth } from '../lib/growth.mjs';
@@ -24,12 +24,12 @@ import { validate } from '../lib/schema.mjs';
 
 const argv = process.argv.slice(2);
 const opt = (n, d) => { const i = argv.indexOf(`--${n}`); return i >= 0 ? argv[i + 1] : d; };
-const abs = (p) => (path.isAbsolute(p) ? p : path.join(ROOT, p));
+const abs = (p) => (path.isAbsolute(p) ? p : path.join(WORK, p));
 const log = (m) => console.log(`[analyze] ${m}`);
 
 async function loadDirectory(file, cfg) {
   if (fs.existsSync(file)) return JSON.parse(fs.readFileSync(file, 'utf8'));
-  log(`${path.relative(ROOT, file)} not found, fetching community-plugins.json`);
+  log(`${path.relative(WORK, file)} not found, fetching community-plugins.json`);
   try { return await getJSON(process.env.RADAR_RELEASES_BASE ?? cfg.sources.releasesBase, 'community-plugins.json'); } catch (e) { log(`could not fetch it (${e.message}); names will fall back to plugin ids`); return []; }
 }
 
@@ -79,12 +79,12 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     log(analysis.gaps
       ? `gaps: ${analysis.gaps.meta.topics} forum topics -> ${analysis.gaps.meta.kept} clusters kept, ${analysis.gaps.clusters.filter((c) => c.status === 'likely-gap').length} likely gaps (forum data ${analysis.forum?.state ?? 'unknown'}, fetched ${analysis.forum?.fetchedAt?.slice(0, 10) ?? '?'})`
       : 'gaps: no forum data, skipped (the rest of the site is unaffected)');
-    log(`wrote ${path.relative(ROOT, out)}`);
+    log(`wrote ${path.relative(WORK, out)}`);
     if (opt('ideas')) {
       const ideasFile = abs(opt('ideas'));
       const ideas = ideasFor(analysis, cfg);
       fs.writeFileSync(ideasFile, `${JSON.stringify(ideas, null, 1)}\n`);
-      log(`wrote ${path.relative(ROOT, ideasFile)}: ${ideas.gaps.length} gaps, ${ideas.maintainersWanted.length} maintainers wanted`);
+      log(`wrote ${path.relative(WORK, ideasFile)}: ${ideas.gaps.length} gaps, ${ideas.maintainersWanted.length} maintainers wanted`);
     }
   } catch (e) {
     console.error(`[analyze] FAILED: ${e.stack || e.message}`);

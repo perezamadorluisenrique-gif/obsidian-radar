@@ -1,0 +1,33 @@
+# Checks on every push and pull request: unit tests, the score ladder (including the offline CI dry run of the weekly
+# pipeline and the Playwright layout check at 375px). Nothing here touches the network or deploys anything.
+name: ci
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm ci --no-audit --no-fund
+      - run: npm i --no-save --no-audit --no-fund playwright
+
+      - name: Score ladder R0..R6
+        run: ./score
