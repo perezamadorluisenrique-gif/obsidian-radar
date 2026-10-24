@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Obsidian Radar ideas.json",
+  "description": "Top gaps (forum requests no plugin covers) and popular-but-quiet plugins that could use a maintainer, each with evidence links. Written by scripts/analyze.mjs; deterministic for a given set of snapshots and forum data.",
+  "type": "object",
+  "required": ["schema", "week", "generated", "notes", "forum", "gaps", "maintainersWanted", "archivedByAuthors", "basis"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": { "const": 1 },
+    "week": { "type": "string", "pattern": "^\\d{4}-W(0[1-9]|[1-4]\\d|5[0-3])$" },
+    "generated": { "type": "string", "format": "date" },
+    "notes": { "type": "array", "items": { "type": "string", "minLength": 10 }, "minItems": 1, "description": "How to read this file, including its limits." },
+    "forum": {
+      "anyOf": [
+        { "type": "null", "description": "No forum data was available; gaps is empty." },
+        {
+          "type": "object",
+          "required": ["state", "fetchedAt", "topics", "source"],
+          "additionalProperties": false,
+          "properties": {
+            "state": { "enum": ["ok", "partial", "too-few", "failed"] },
+            "fetchedAt": { "type": "string", "format": "date-time" },
+            "topics": { "type": "integer", "minimum": 0 },
+            "source": { "type": "string", "format": "uri" }
+          }
+        }
+      ]
+    },
+    "gaps": { "type": "array", "items": { "$ref": "#/definitions/gap" } },
+    "maintainersWanted": { "type": "array", "items": { "$ref": "#/definitions/maintainerWanted" } },
+    "archivedByAuthors": { "type": "array", "items": { "$ref": "#/definitions/archived" } },
+    "basis": {
+      "type": "object",
+      "required": ["snapshots", "firstWeek", "plugins"],
+      "additionalProperties": false,
+      "properties": {
+        "snapshots": { "type": "integer", "minimum": 1, "description": "How many weekly snapshots exist; history begins at the first one." },
+        "firstWeek": { "type": "string", "pattern": "^\\d{4}-W\\d{2}$" },
+        "plugins": { "type": "integer", "minimum": 0 }
+      }
+    }
+  },
+  "definitions": {
+    "gap": {
+      "type": "object",
+      "required": ["id", "title", "keywords", "requests", "likes", "views", "status", "coverage", "rank", "appLevel", "firstRequested", "lastActive", "closestPlugins", "evidence"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^gap-\\d+$" },
+        "title": { "type": "string", "minLength": 1 },
+        "keywords": { "type": "array", "items": { "type": "string" } },
+        "requests": { "type": "integer", "minimum": 1, "description": "Forum topics in the cluster." },
+        "likes": { "type": "integer", "minimum": 0 },
+        "views": { "type": "integer", "minimum": 0 },
+        "status": { "enum": ["likely-gap", "partly-covered", "probably-covered"] },
+        "coverage": { "type": "number", "minimum": 0, "maximum": 1, "description": "Demand-weighted mean of the best description similarity between each request and any plugin. Low = nothing resembles it." },
+        "rank": { "type": "number", "minimum": 0, "description": "demand * (1 - min(1, coverage / coveredAbove)); bigger = more asked for and less covered." },
+        "appLevel": { "type": "boolean", "description": "Most requests concern Obsidian itself (core, mobile, Sync, Publish): a plugin may not be able to deliver them." },
+        "firstRequested": { "type": "string", "format": "date" },
+        "lastActive": { "type": "string", "format": "date" },
+        "closestPlugins": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "name", "similarity", "downloads", "url"],
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string", "minLength": 1 },
+              "name": { "type": "string" },
+              "similarity": { "type": "number", "minimum": 0, "maximum": 1 },
+              "downloads": { "type": ["integer", "null"], "minimum": 0 },
+              "url": { "type": "string", "format": "uri" }
+            }
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["title", "url", "likes", "created"],
+            "additionalProperties": false,
+            "properties": {
+              "title": { "type": "string", "minLength": 1 },
+              "url": { "type": "string", "format": "uri" },
+              "likes": { "type": "integer", "minimum": 0 },
+              "created": { "type": "string", "format": "date" }
+            }
+          }
+        }
+      }
+    },
+    "maintainerWanted": {
+      "type": "object",
+      "required": ["id", "name", "downloads", "weeklyDownloads", "quietMonths", "lastActivity", "openIssues", "stars", "score", "provisional", "evidence"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "name": { "type": "string" },
+        "downloads": { "type": "integer", "minimum": 0 },
+        "weeklyDownloads": { "type": ["number", "null"], "description": "Null on the first snapshot (no previous week to compare)." },
+        "quietMonths": { "type": "number", "minimum": 0 },
+        "lastActivity": { "type": "string", "format": "date" },
+        "openIssues": { "type": ["integer", "null"], "minimum": 0 },
+        "stars": { "type": ["integer", "null"], "minimum": 0 },
+        "score": { "type": "number", "minimum": 0, "maximum": 100 },
+        "provisional": { "type": "boolean" },
+        "evidence": {
+          "type": "object",
+          "required": ["directory", "repository", "issues"],
+          "additionalProperties": false,
+          "properties": {
+            "directory": { "type": "string", "format": "uri" },
+            "repository": { "type": ["string", "null"], "format": "uri" },
+            "issues": { "type": ["string", "null"], "format": "uri" }
+          }
+        }
+      }
+    },
+    "archived": {
+      "type": "object",
+      "required": ["id", "name", "downloads", "evidence"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "downloads": { "type": "integer", "minimum": 0 },
+        "evidence": {
+          "type": "object",
+          "required": ["directory", "repository"],
+          "additionalProperties": false,
+          "properties": {
+            "directory": { "type": "string", "format": "uri" },
+            "repository": { "type": ["string", "null"], "format": "uri" }
+          }
+        }
+      }
+    }
+  }
+}

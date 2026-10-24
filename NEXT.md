@@ -1,8 +1,8 @@
 # NEXT
 
 ## Next
-1. R3: scripts/forum.mjs (Discourse feature requests, graceful failure, fixture), lib/text.mjs + lib/gaps.mjs (TF-IDF clustering, closest plugins), schemas/ideas.schema.json, ideas.json.
-2. R4: site (scripts/build-site.mjs, link check, Playwright 375px). R5: .github/workflows/weekly.yml + dry run. R6: README, Methodology, RESULTS.md.
+1. R4: site (scripts/build-site.mjs, link check, Playwright 375px + dark mode + search).
+2. R5: .github/workflows/weekly.yml + CI dry run (forum step offline). R6: README, Methodology page, RESULTS.md.
 
 ## How to resume
 1. `git checkout claude/charming-bardeen-ptiqqz && git pull`

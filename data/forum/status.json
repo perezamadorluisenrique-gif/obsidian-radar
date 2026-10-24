@@ -1,0 +1,13 @@
+{
+ "fetchedAt": "2026-10-24T05:08:38.565Z",
+ "source": "https://forum.obsidian.md",
+ "requests": 23,
+ "failures": 0,
+ "topics": 987,
+ "perCategory": {
+  "8": 629,
+  "10": 358
+ },
+ "kept": "new",
+ "state": "ok"
+}

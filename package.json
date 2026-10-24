@@ -10,7 +10,7 @@
   "scripts": {
     "fetch": "node scripts/fetch.mjs",
     "forum": "node scripts/forum.mjs",
-    "analyze": "node scripts/analyze.mjs",
+    "analyze": "node scripts/analyze.mjs --ideas ideas.json",
     "build": "node scripts/build-site.mjs",
     "check": "node scripts/check-links.mjs dist && node scripts/check-layout.mjs dist",
     "pipeline": "npm run fetch && npm run forum && npm run analyze && npm run build",

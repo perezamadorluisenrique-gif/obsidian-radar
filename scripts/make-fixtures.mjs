@@ -3,7 +3,9 @@
 //
 //   node scripts/make-fixtures.mjs releases --from <dir with the 3 raw Obsidian files>
 //   node scripts/make-fixtures.mjs snapshots --from <data/snapshots/YYYY-Www.json.gz of a real snapshot>
+//   node scripts/make-fixtures.mjs forum [--from data/forum] [--directory data/cache/directory.json]
 //
+// `forum` writes a trimmed sample of the real forum topics plus a matching plugin list to fixtures/forum/.
 // `releases` writes a small, deterministic sample of the real directory to fixtures/releases/.
 // `snapshots` writes that same sample of a REAL snapshot as fixtures/snapshots/<its week>.json.gz plus a SYNTHETIC
 // previous week, built from fixtures/snapshots/plan.json, so growth tests have two weeks with known answers.
@@ -68,6 +70,28 @@ if (what === 'releases') {
   for (const [id, g] of Object.entries(plan.ghosts)) prev[id] = { dl: g.dl, rel: g.rel };
   writeSnapshot(outDir, mk(plan.previousWeek, plan.previousCapturedAt, prev, 'SYNTHETIC test week derived from the real sample by scripts/make-fixtures.mjs from fixtures/snapshots/plan.json. Not real data.'));
   console.log(`fixtures/snapshots: ${real.week} (${Object.keys(sample).length} plugins, real) + ${plan.previousWeek} (${Object.keys(prev).length} plugins, synthetic)`);
+} else if (what === 'forum') {
+  // A real, trimmed sample of the forum (the most liked topics + a deterministic random sample) and a plugin list for it:
+  // for every sampled topic its two closest real plugins, plus unrelated ones, so the fixture holds covered requests and gaps.
+  const { readForum } = await import('../lib/forum.mjs');
+  const { analyzeGaps } = await import('../lib/gaps.mjs');
+  const { topics } = readForum(path.resolve(ROOT, argv.includes('--from') ? from : 'data/forum')).topics ?? {};
+  const dirFile = path.resolve(ROOT, argv.includes('--directory') ? argv[argv.indexOf('--directory') + 1] : 'data/cache/directory.json');
+  const dir = JSON.parse(fs.readFileSync(dirFile, 'utf8'));
+  const pick = new Map();
+  for (const t of [...topics].sort((a, b) => b.likes - a.likes || a.id - b.id).slice(0, 70)) pick.set(t.id, t);
+  for (const t of [...topics].sort((a, b) => hash(String(a.id)).localeCompare(hash(String(b.id)))).slice(0, 70)) pick.set(t.id, t);
+  const sample = [...pick.values()].sort((a, b) => a.id - b.id);
+  const probe = analyzeGaps({ topics: sample.map((t) => ({ ...t, tags: t.tags })), plugins: dir, cfg: { ...cfg, gaps: { ...cfg.gaps, closest: 2, topN: 1e6, minClusterSize: 1, singleMinLikes: 0, similarity: 0.99 } } });
+  const keep = new Set();
+  for (const c of probe.clusters) for (const p of c.closestPlugins) keep.add(p.id);
+  for (const p of [...dir].sort((a, b) => hash(a.id).localeCompare(hash(b.id))).slice(0, 120)) keep.add(p.id);
+  const plugins = dir.filter((p) => keep.has(p.id)).map(({ id, name, description, repo }) => ({ id, name, description, repo }));
+  const outDir = path.join(ROOT, 'fixtures', 'forum');
+  fs.mkdirSync(outDir, { recursive: true });
+  fs.writeFileSync(path.join(outDir, 'topics.json'), JSON.stringify({ schema: 1, fetchedAt: '2026-10-24T05:00:00.000Z', topics: sample }, null, 0));
+  fs.writeFileSync(path.join(outDir, 'plugins.json'), JSON.stringify(plugins, null, 0));
+  console.log(`fixtures/forum: ${sample.length} topics, ${plugins.length} plugins`);
 } else if (what === 'graphql-subset') {
   // Prune GitHub's public schema (https://docs.github.com/public/fpt/schema.docs.graphql) down to the
   // fields lib/github.mjs queries, so tests can validate generated queries offline against REAL type definitions.
@@ -101,6 +125,6 @@ if (what === 'releases') {
   fs.writeFileSync(path.join(ROOT, 'fixtures', 'graphql', 'github-subset.graphql'), out);
   console.log(`fixtures/graphql/github-subset.graphql: ${out.length} bytes, ${defs.length} definitions`);
 } else {
-  console.error('usage: make-fixtures.mjs releases|snapshots|graphql-subset --from <dir or file>');
+  console.error('usage: make-fixtures.mjs releases|snapshots|forum|graphql-subset --from <dir or file>');
   process.exit(2);
 }

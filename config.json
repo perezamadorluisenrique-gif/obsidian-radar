@@ -45,5 +45,79 @@
     "newcomerDays": 90,
     "orderWindow": 40,
     "orderPercentile": 0.25
+  },
+  "forum": {
+    "categories": [
+      {
+        "id": 8,
+        "slug": "feature-requests",
+        "kind": "request"
+      },
+      {
+        "id": 10,
+        "slug": "plugins-idea",
+        "kind": "idea"
+      }
+    ],
+    "periods": [
+      "yearly",
+      "all"
+    ],
+    "pages": 6,
+    "latestPages": 2,
+    "delayMs": 1100,
+    "timeoutMs": 20000,
+    "retries": 2,
+    "maxFailures": 3,
+    "keepIfBelow": 0.5
+  },
+  "gaps": {
+    "similarity": 0.45,
+    "refinePasses": 2,
+    "minClusterSize": 2,
+    "singleMinLikes": 50,
+    "gapBelow": 0.35,
+    "coveredAbove": 0.5,
+    "closest": 5,
+    "evidence": 5,
+    "topN": 40,
+    "labelTerms": 4,
+    "ignoreTags": [
+      "valuable",
+      "ui-ux",
+      "upstream-bug",
+      "plugin-release",
+      "commercial",
+      "mobile",
+      "ios",
+      "android",
+      "macos",
+      "repro",
+      "not-intuitive",
+      "community",
+      "rfc",
+      "pkm",
+      "settings"
+    ],
+    "coreHints": [
+      "\\bcore\\b",
+      "\\bios\\b",
+      "\\bandroid\\b",
+      "\\bmobile\\b",
+      "\\bportable\\b",
+      "\\bsync\\b",
+      "\\bpublish\\b",
+      "\\bwy[sz]i?wyg\\b",
+      "\\bapp\\b",
+      "\\bmac ?os\\b",
+      "\\bwindows\\b",
+      "\\blinux\\b",
+      "\\bobsidian for\\b"
+    ]
+  },
+  "ideas": {
+    "gaps": 25,
+    "maintainers": 25,
+    "archived": 15
   }
 }
