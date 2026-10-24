@@ -1,0 +1,23 @@
+{
+  "name": "obsidian-radar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Obsidian Ecosystem Radar: weekly, deterministic analysis of the Obsidian community-plugin ecosystem.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "fetch": "node scripts/fetch.mjs",
+    "forum": "node scripts/forum.mjs",
+    "analyze": "node scripts/analyze.mjs",
+    "build": "node scripts/build-site.mjs",
+    "check": "node scripts/check-links.mjs dist && node scripts/check-layout.mjs dist",
+    "pipeline": "npm run fetch && npm run forum && npm run analyze && npm run build",
+    "test": "node --test tests/",
+    "score": "node scripts/score.mjs"
+  },
+  "devDependencies": {
+    "yaml": "^2.9.1"
+  }
+}

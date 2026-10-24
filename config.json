@@ -1,0 +1,14 @@
+{
+  "site": {
+    "title": "Obsidian Ecosystem Radar",
+    "repo": "perezamadorluisenrique-gif/obsidian-radar",
+    "url": "https://perezamadorluisenrique-gif.github.io/obsidian-radar/"
+  },
+  "myAuthor": "siulved54",
+  "sources": {
+    "releasesBase": "https://raw.githubusercontent.com/obsidianmd/obsidian-releases/master",
+    "forumBase": "https://forum.obsidian.md",
+    "graphqlUrl": "https://api.github.com/graphql",
+    "restUrl": "https://api.github.com"
+  }
+}

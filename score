@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Ladder verifier. Usage: ./score [--rung R3] [--only R4] [--skip-browser] [-v]
+# Checks are only ever extended, never loosened to make a failing check pass.
+cd "$(dirname "$0")" && exec node scripts/score.mjs "$@"
