@@ -10,5 +10,19 @@
     "forumBase": "https://forum.obsidian.md",
     "graphqlUrl": "https://api.github.com/graphql",
     "restUrl": "https://api.github.com"
+  },
+  "fetch": {
+    "batchSize": 100,
+    "labelsMinDownloads": 5000,
+    "rateLimitReserve": 25,
+    "maxWaitSec": 900,
+    "restBudget": 3000,
+    "restConcurrency": 6,
+    "saveEveryBatches": 10,
+    "maxWaits": 5
+  },
+  "abandonment": {
+    "minDownloads": 10000,
+    "quietDays": 365
   }
 }

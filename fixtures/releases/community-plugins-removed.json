@@ -1,0 +1,62 @@
+[
+ {
+  "id": "advanced-toolbar",
+  "name": "Advanced Mobile Toolbar",
+  "reason": "Features merged into Commander plugin"
+ },
+ {
+  "id": "arrows",
+  "name": "Arrows",
+  "reason": "Archived repository"
+ },
+ {
+  "id": "ava",
+  "name": "Ava",
+  "reason": "No longer functional"
+ },
+ {
+  "id": "block-reference-counts",
+  "name": "Block Reference Counts",
+  "reason": "No longer maintained"
+ },
+ {
+  "id": "close-similar-tabs",
+  "name": "Close Similar Tabs",
+  "reason": "Developer banned from GitHub"
+ },
+ {
+  "id": "cm-editor-syntax-highlight-obsidian",
+  "name": "Editor Syntax Highlight",
+  "reason": "No longer functional"
+ },
+ {
+  "id": "cm-show-whitespace-obsidian",
+  "name": "Show Whitespace",
+  "reason": "No longer functional"
+ },
+ {
+  "id": "code-block-copy",
+  "name": "Copy button for code blocks",
+  "reason": "Archived repository"
+ },
+ {
+  "id": "contextual-comments",
+  "name": "Contextual Comments",
+  "reason": "Developer banned from GitHub"
+ },
+ {
+  "id": "customizable-page-header-buttons",
+  "name": "Customizable Page Header and Title Bar",
+  "reason": "Features merged into Commander plugin"
+ },
+ {
+  "id": "customizable-sidebar",
+  "name": "Customizable Sidebar",
+  "reason": "Features merged into Commander plugin"
+ },
+ {
+  "id": "duplicate-line",
+  "name": "Duplicate Line",
+  "reason": "Developer banned from GitHub"
+ }
+]

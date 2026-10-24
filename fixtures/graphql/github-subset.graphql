@@ -1,0 +1,49 @@
+# Pruned copy of GitHub's public GraphQL schema (docs.github.com/public/fpt/schema.docs.graphql).
+# Only the types/fields used by lib/github.mjs; regenerate with: node scripts/make-fixtures.mjs graphql-subset --from <dir>
+
+scalar DateTime
+
+type IssueConnection {
+  totalCount: Int!
+}
+
+enum IssueState {
+  CLOSED
+  OPEN
+}
+
+type Label {
+  issues(after: String, before: String, first: Int, last: Int, states: [IssueState!]): IssueConnection!
+  name: String!
+}
+
+type LabelConnection {
+  nodes: [Label]
+}
+
+type Query {
+  rateLimit: RateLimit
+  repository(followRenames: Boolean = true, name: String!, owner: String!): Repository
+}
+
+type RateLimit {
+  cost: Int!
+  remaining: Int!
+  resetAt: DateTime!
+}
+
+type Release {
+  publishedAt: DateTime
+}
+
+type Repository {
+  createdAt: DateTime!
+  isArchived: Boolean!
+  issues(after: String, before: String, first: Int, last: Int, states: [IssueState!]): IssueConnection!
+  labels(after: String, before: String, first: Int, last: Int, query: String): LabelConnection
+  latestRelease: Release
+  pushedAt: DateTime
+  stargazerCount: Int!
+}
+
+scalar URI

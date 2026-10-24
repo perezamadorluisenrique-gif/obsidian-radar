@@ -18,6 +18,7 @@
     "score": "node scripts/score.mjs"
   },
   "devDependencies": {
+    "graphql": "^17.0.2",
     "yaml": "^2.9.1"
   }
 }

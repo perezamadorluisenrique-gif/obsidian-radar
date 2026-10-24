@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Obsidian Radar weekly snapshot",
+  "description": "data/snapshots/YYYY-Www.json.gz (gzip of this JSON). Downloads are cumulative totals; weekly growth is computed by comparing snapshots, never stored.",
+  "type": "object",
+  "required": ["schema", "week", "capturedAt", "plugins", "refresh", "data"],
+  "additionalProperties": false,
+  "properties": {
+    "schema": { "const": 1 },
+    "week": { "type": "string", "pattern": "^\\d{4}-W(0[1-9]|[1-4]\\d|5[0-3])$" },
+    "capturedAt": { "type": "string", "format": "date-time" },
+    "statsUpdated": { "type": "string", "format": "date-time", "description": "Newest per-plugin 'updated' time seen in community-plugin-stats.json." },
+    "plugins": { "type": "integer", "minimum": 0, "description": "Number of plugins in community-plugins.json at capture time; equals the number of keys in data." },
+    "refresh": {
+      "type": "object",
+      "description": "State of the rolling GitHub metadata refresh. state=rolling means some plugins still carry older (or no) metadata and are refreshed first on the next run.",
+      "required": ["state", "transport", "withMeta", "pending", "refreshed"],
+      "additionalProperties": false,
+      "properties": {
+        "state": { "enum": ["complete", "rolling"] },
+        "transport": { "enum": ["graphql", "rest", "mixed", "none"] },
+        "withMeta": { "type": "integer", "minimum": 0, "description": "Plugins that carry GitHub metadata (fresh or carried over)." },
+        "pending": { "type": "integer", "minimum": 0, "description": "Plugins not refreshed in this run (they carry older metadata, or none)." },
+        "refreshed": { "type": "integer", "minimum": 0, "description": "Plugins refreshed during this run." },
+        "limited": { "type": "boolean", "description": "True when the run stopped early (rate limit, budget or missing token)." },
+        "note": { "type": "string" }
+      }
+    },
+    "data": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/definitions/plugin" }
+    }
+  },
+  "definitions": {
+    "plugin": {
+      "type": "object",
+      "required": ["dl"],
+      "additionalProperties": false,
+      "properties": {
+        "dl": { "type": "integer", "minimum": 0, "description": "Total downloads across all versions." },
+        "rel": { "type": "string", "format": "date", "description": "Date of the latest release as reported by community-plugin-stats.json ('updated')." },
+        "push": { "type": "string", "format": "date", "description": "Repository pushedAt." },
+        "crt": { "type": "string", "format": "date", "description": "Repository createdAt." },
+        "arch": { "const": 1, "description": "Present (1) when the repository is archived." },
+        "stars": { "type": "integer", "minimum": 0 },
+        "iss": { "type": "integer", "minimum": 0, "description": "Open issues (GraphQL: issues only; REST bootstrap: includes pull requests)." },
+        "fr": { "type": "integer", "minimum": 0, "description": "Open issues whose label looks like a feature request (GraphQL only)." },
+        "gone": { "const": 1, "description": "Present (1) when GitHub reports the repository as not found." },
+        "chk": { "type": "string", "format": "date", "description": "Day the GitHub metadata was last checked." },
+        "src": { "enum": ["g", "r"], "description": "Transport of the last check: g = GraphQL, r = REST." }
+      }
+    }
+  }
+}
