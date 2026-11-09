@@ -1,7 +1,7 @@
 {
  "schema": 1,
- "week": "2026-W45",
- "generated": "2026-11-02",
+ "week": "2026-W46",
+ "generated": "2026-11-09",
  "notes": [
   "Gaps are found by comparing words, not meaning: a plugin can solve a request without sharing its vocabulary, so treat \"likelyGap\" as \"worth a look\", not as proof.",
   "Some requests ask for changes to Obsidian itself (core app, mobile apps, Sync, Publish). Those are flagged appLevel and may not be possible as a plugin.",
@@ -10,8 +10,8 @@
  ],
  "forum": {
   "state": "ok",
-  "fetchedAt": "2026-11-02T14:07:14.081Z",
-  "topics": 986,
+  "fetchedAt": "2026-11-09T14:35:57.669Z",
+  "topics": 985,
   "source": "https://forum.obsidian.md"
  },
  "gaps": [
@@ -26,10 +26,10 @@
    ],
    "requests": 1,
    "likes": 1079,
-   "views": 32078,
+   "views": 32388,
    "status": "likely-gap",
-   "coverage": 0.271,
-   "rank": 494.6,
+   "coverage": 0.272,
+   "rank": 492.5,
    "appLevel": true,
    "firstRequested": "2021-03-26",
    "lastActive": "2026-07-18",
@@ -37,36 +37,36 @@
     {
      "id": "seamless-embeds",
      "name": "Seamless Embeds",
-     "similarity": 0.271,
-     "downloads": 904,
+     "similarity": 0.272,
+     "downloads": 933,
      "url": "https://obsidian.md/plugins?id=seamless-embeds"
     },
     {
      "id": "embed-editor",
      "name": "Embed Editor",
-     "similarity": 0.268,
-     "downloads": 1911,
+     "similarity": 0.267,
+     "downloads": 1992,
      "url": "https://obsidian.md/plugins?id=embed-editor"
     },
     {
      "id": "embed-code-file",
      "name": "Embed Code File",
      "similarity": 0.189,
-     "downloads": 9204,
+     "downloads": 9225,
      "url": "https://obsidian.md/plugins?id=embed-code-file"
     },
     {
      "id": "todoapp",
      "name": "TodoApp Blocks",
-     "similarity": 0.185,
-     "downloads": 574,
+     "similarity": 0.184,
+     "downloads": 581,
      "url": "https://obsidian.md/plugins?id=todoapp"
     },
     {
      "id": "threatback",
      "name": "Threatback",
-     "similarity": 0.183,
-     "downloads": 19,
+     "similarity": 0.184,
+     "downloads": 29,
      "url": "https://obsidian.md/plugins?id=threatback"
     }
    ],
@@ -90,7 +90,7 @@
    ],
    "requests": 1,
    "likes": 799,
-   "views": 38271,
+   "views": 38562,
    "status": "likely-gap",
    "coverage": 0.331,
    "rank": 270.4,
@@ -102,36 +102,36 @@
      "id": "butter-editor",
      "name": "Butter Editor",
      "similarity": 0.331,
-     "downloads": 3258,
+     "downloads": 3330,
      "url": "https://obsidian.md/plugins?id=butter-editor"
     },
     {
      "id": "editor-mode-button",
      "name": "Editor Mode Button",
-     "similarity": 0.282,
-     "downloads": 1351,
+     "similarity": 0.281,
+     "downloads": 1443,
      "url": "https://obsidian.md/plugins?id=editor-mode-button"
     },
     {
      "id": "wysimark-editor",
      "name": "Wysimark Editor",
      "similarity": 0.265,
-     "downloads": 8226,
+     "downloads": 8378,
      "url": "https://obsidian.md/plugins?id=wysimark-editor"
     },
     {
      "id": "html-visual-editor",
      "name": "HTML Visual Editor",
      "similarity": 0.24,
-     "downloads": 823,
+     "downloads": 843,
      "url": "https://obsidian.md/plugins?id=html-visual-editor"
     },
     {
-     "id": "mathlive-in-editor-mode",
-     "name": "MathLive in Editor Mode",
-     "similarity": 0.23,
-     "downloads": 4232,
-     "url": "https://obsidian.md/plugins?id=mathlive-in-editor-mode"
+     "id": "visual-ui-editor",
+     "name": "Visual UI Editor",
+     "similarity": 0.229,
+     "downloads": 3928,
+     "url": "https://obsidian.md/plugins?id=visual-ui-editor"
     }
    ],
    "evidence": [
@@ -154,10 +154,10 @@
    ],
    "requests": 1,
    "likes": 662,
-   "views": 30375,
+   "views": 30672,
    "status": "partly-covered",
-   "coverage": 0.381,
-   "rank": 157.8,
+   "coverage": 0.384,
+   "rank": 153.8,
    "appLevel": false,
    "firstRequested": "2023-07-31",
    "lastActive": "2026-10-28",
@@ -165,36 +165,36 @@
     {
      "id": "yaml-properties",
      "name": "YAML Properties",
-     "similarity": 0.381,
-     "downloads": 4117,
+     "similarity": 0.384,
+     "downloads": 4178,
      "url": "https://obsidian.md/plugins?id=yaml-properties"
     },
     {
      "id": "property-order",
      "name": "Property Order",
-     "similarity": 0.305,
-     "downloads": 2827,
+     "similarity": 0.308,
+     "downloads": 2869,
      "url": "https://obsidian.md/plugins?id=property-order"
     },
     {
      "id": "property-reminders",
      "name": "Property Reminders",
-     "similarity": 0.301,
-     "downloads": 215,
+     "similarity": 0.302,
+     "downloads": 226,
      "url": "https://obsidian.md/plugins?id=property-reminders"
     },
     {
      "id": "date-linker",
      "name": "Date Linker",
-     "similarity": 0.296,
-     "downloads": 44,
+     "similarity": 0.297,
+     "downloads": 52,
      "url": "https://obsidian.md/plugins?id=date-linker"
     },
     {
      "id": "property-annotations",
      "name": "Property Annotations",
-     "similarity": 0.293,
-     "downloads": 145,
+     "similarity": 0.295,
+     "downloads": 150,
      "url": "https://obsidian.md/plugins?id=property-annotations"
     }
    ],
@@ -218,10 +218,10 @@
    ],
    "requests": 2,
    "likes": 460,
-   "views": 32604,
+   "views": 32815,
    "status": "likely-gap",
-   "coverage": 0.343,
-   "rank": 145.1,
+   "coverage": 0.345,
+   "rank": 143.2,
    "appLevel": false,
    "firstRequested": "2021-05-23",
    "lastActive": "2026-05-21",
@@ -230,35 +230,35 @@
      "id": "lineage",
      "name": "Lineage",
      "similarity": 0.368,
-     "downloads": 25230,
+     "downloads": 25365,
      "url": "https://obsidian.md/plugins?id=lineage"
     },
     {
      "id": "writing-buddy",
      "name": "Writing Buddy",
-     "similarity": 0.324,
-     "downloads": 326,
+     "similarity": 0.325,
+     "downloads": 380,
      "url": "https://obsidian.md/plugins?id=writing-buddy"
     },
     {
      "id": "folio",
      "name": "Folio",
      "similarity": 0.286,
-     "downloads": 1625,
+     "downloads": 1646,
      "url": "https://obsidian.md/plugins?id=folio"
     },
     {
      "id": "writing",
      "name": "Writing",
      "similarity": 0.285,
-     "downloads": 10489,
+     "downloads": 10505,
      "url": "https://obsidian.md/plugins?id=writing"
     },
     {
      "id": "novelr",
      "name": "Novelr",
      "similarity": 0.279,
-     "downloads": 369,
+     "downloads": 381,
      "url": "https://obsidian.md/plugins?id=novelr"
     }
    ],
@@ -287,10 +287,10 @@
    ],
    "requests": 1,
    "likes": 323,
-   "views": 98117,
+   "views": 98330,
    "status": "likely-gap",
-   "coverage": 0.3,
-   "rank": 129.6,
+   "coverage": 0.299,
+   "rank": 130.2,
    "appLevel": true,
    "firstRequested": "2020-06-01",
    "lastActive": "2026-02-24",
@@ -298,37 +298,37 @@
     {
      "id": "power-mode",
      "name": "POWER MODE",
-     "similarity": 0.3,
-     "downloads": 3853,
+     "similarity": 0.299,
+     "downloads": 3860,
      "url": "https://obsidian.md/plugins?id=power-mode"
     },
     {
      "id": "private-mode",
      "name": "Private Mode",
      "similarity": 0.288,
-     "downloads": 2283,
+     "downloads": 2313,
      "url": "https://obsidian.md/plugins?id=private-mode"
     },
     {
      "id": "run",
      "name": "Run",
-     "similarity": 0.285,
-     "downloads": 4003,
+     "similarity": 0.284,
+     "downloads": 4122,
      "url": "https://obsidian.md/plugins?id=run"
-    },
-    {
-     "id": "frontmatter-viewmode",
-     "name": "Set View Mode per Note",
-     "similarity": 0.268,
-     "downloads": 3404,
-     "url": "https://obsidian.md/plugins?id=frontmatter-viewmode"
     },
     {
      "id": "just-simple-excalidraw",
      "name": "Just Simple Excalidraw",
      "similarity": 0.267,
-     "downloads": 2684,
+     "downloads": 2745,
      "url": "https://obsidian.md/plugins?id=just-simple-excalidraw"
+    },
+    {
+     "id": "frontmatter-viewmode",
+     "name": "Set View Mode per Note",
+     "similarity": 0.266,
+     "downloads": 3444,
+     "url": "https://obsidian.md/plugins?id=frontmatter-viewmode"
     }
    ],
    "evidence": [
@@ -349,49 +349,49 @@
     "web",
     "properties"
    ],
-   "requests": 8,
-   "likes": 1369,
-   "views": 294232,
+   "requests": 7,
+   "likes": 1370,
+   "views": 295419,
    "status": "partly-covered",
-   "coverage": 0.461,
-   "rank": 107.4,
+   "coverage": 0.462,
+   "rank": 104.7,
    "appLevel": true,
    "firstRequested": "2020-06-17",
-   "lastActive": "2026-10-28",
+   "lastActive": "2026-10-25",
    "closestPlugins": [
     {
      "id": "obsidian-wordpress",
      "name": "WordPress",
      "similarity": 0.964,
-     "downloads": 20903,
+     "downloads": 20926,
      "url": "https://obsidian.md/plugins?id=obsidian-wordpress"
     },
     {
      "id": "publish-to-wordpress",
      "name": "Publish to WordPress",
-     "similarity": 0.78,
-     "downloads": 623,
+     "similarity": 0.781,
+     "downloads": 636,
      "url": "https://obsidian.md/plugins?id=publish-to-wordpress"
     },
     {
      "id": "github-publish",
      "name": "GitHub Publish",
-     "similarity": 0.573,
-     "downloads": 821,
+     "similarity": 0.575,
+     "downloads": 849,
      "url": "https://obsidian.md/plugins?id=github-publish"
     },
     {
      "id": "wordpress-publisher-pro",
      "name": "WordPress Publisher",
-     "similarity": 0.561,
-     "downloads": 7,
+     "similarity": 0.562,
+     "downloads": 63,
      "url": "https://obsidian.md/plugins?id=wordpress-publisher-pro"
     },
     {
      "id": "publish-status",
      "name": "Publish Status",
-     "similarity": 0.541,
-     "downloads": 117,
+     "similarity": 0.545,
+     "downloads": 120,
      "url": "https://obsidian.md/plugins?id=publish-status"
     }
    ],
@@ -399,7 +399,7 @@
     {
      "title": "Obsidian for web",
      "url": "https://forum.obsidian.md/t/obsidian-for-web/2049",
-     "likes": 956,
+     "likes": 957,
      "created": "2020-06-17"
     },
     {
@@ -429,6 +429,70 @@
    ]
   },
   {
+   "id": "gap-52025",
+   "title": "Ignore/exclude completely files or a folder from all obsidian indexers and parsers",
+   "keywords": [
+    "parsers",
+    "indexers",
+    "completely",
+    "exclude"
+   ],
+   "requests": 1,
+   "likes": 349,
+   "views": 27106,
+   "status": "partly-covered",
+   "coverage": 0.358,
+   "rank": 99.4,
+   "appLevel": false,
+   "firstRequested": "2023-01-11",
+   "lastActive": "2026-08-05",
+   "closestPlugins": [
+    {
+     "id": "file-ignore",
+     "name": "File Ignore",
+     "similarity": 0.358,
+     "downloads": 4635,
+     "url": "https://obsidian.md/plugins?id=file-ignore"
+    },
+    {
+     "id": "obsidian-link-indexer",
+     "name": "Link indexer",
+     "similarity": 0.301,
+     "downloads": 9051,
+     "url": "https://obsidian.md/plugins?id=obsidian-link-indexer"
+    },
+    {
+     "id": "concept-indexer",
+     "name": "Concept Indexer",
+     "similarity": 0.277,
+     "downloads": 82,
+     "url": "https://obsidian.md/plugins?id=concept-indexer"
+    },
+    {
+     "id": "scripture-indexer",
+     "name": "Scripture Indexer",
+     "similarity": 0.27,
+     "downloads": 799,
+     "url": "https://obsidian.md/plugins?id=scripture-indexer"
+    },
+    {
+     "id": "ignore",
+     "name": "Ignore",
+     "similarity": 0.259,
+     "downloads": 1389,
+     "url": "https://obsidian.md/plugins?id=ignore"
+    }
+   ],
+   "evidence": [
+    {
+     "title": "Ignore/exclude completely files or a folder from all obsidian indexers and parsers",
+     "url": "https://forum.obsidian.md/t/ignore-exclude-completely-files-or-a-folder-from-all-obsidian-indexers-and-parsers/52025",
+     "likes": 349,
+     "created": "2023-01-11"
+    }
+   ]
+  },
+  {
    "id": "gap-687",
    "title": "Use H1 or YAML property \"title\" instead of or in addition to filename as display name",
    "keywords": [
@@ -439,10 +503,10 @@
    ],
    "requests": 2,
    "likes": 718,
-   "views": 55627,
+   "views": 55911,
    "status": "partly-covered",
-   "coverage": 0.432,
-   "rank": 97.9,
+   "coverage": 0.434,
+   "rank": 95,
    "appLevel": false,
    "firstRequested": "2020-05-28",
    "lastActive": "2026-03-14",
@@ -451,35 +515,35 @@
      "id": "tab-title-from-file-title",
      "name": "Tab Title from H1 File Title",
      "similarity": 0.447,
-     "downloads": 1279,
+     "downloads": 1297,
      "url": "https://obsidian.md/plugins?id=tab-title-from-file-title"
     },
     {
      "id": "title-sync",
      "name": "Title Sync",
-     "similarity": 0.431,
-     "downloads": 460,
+     "similarity": 0.433,
+     "downloads": 468,
      "url": "https://obsidian.md/plugins?id=title-sync"
     },
     {
      "id": "property-over-file-name",
      "name": "Property Over File Name",
-     "similarity": 0.381,
-     "downloads": 10589,
+     "similarity": 0.382,
+     "downloads": 10635,
      "url": "https://obsidian.md/plugins?id=property-over-file-name"
     },
     {
      "id": "vault-name",
      "name": "Vault Name",
-     "similarity": 0.344,
-     "downloads": 3164,
+     "similarity": 0.345,
+     "downloads": 3205,
      "url": "https://obsidian.md/plugins?id=vault-name"
     },
     {
      "id": "yaml-properties",
      "name": "YAML Properties",
-     "similarity": 0.332,
-     "downloads": 4117,
+     "similarity": 0.334,
+     "downloads": 4178,
      "url": "https://obsidian.md/plugins?id=yaml-properties"
     }
    ],
@@ -499,130 +563,130 @@
    ]
   },
   {
-   "id": "gap-19962",
-   "title": "A general format for specifying links to a part of note (multiple paragraphs, ranges) / Embedding Multiple Consecutive Headings Or Blocks",
+   "id": "gap-14230",
+   "title": "Disable auto-save or change frequency",
    "keywords": [
-    "multiple",
-    "consecutive",
-    "specifying",
-    "general"
+    "frequency",
+    "disable",
+    "change",
+    "save"
    ],
    "requests": 1,
-   "likes": 253,
-   "views": 4735,
-   "status": "likely-gap",
-   "coverage": 0.31,
-   "rank": 96.5,
+   "likes": 461,
+   "views": 29016,
+   "status": "partly-covered",
+   "coverage": 0.401,
+   "rank": 91.5,
    "appLevel": false,
-   "firstRequested": "2021-06-22",
-   "lastActive": "2026-10-23",
+   "firstRequested": "2021-03-08",
+   "lastActive": "2026-07-31",
    "closestPlugins": [
     {
-     "id": "multiple-notes-outline",
-     "name": "Multiple Notes Outline",
-     "similarity": 0.31,
-     "downloads": 9952,
-     "url": "https://obsidian.md/plugins?id=multiple-notes-outline"
+     "id": "word-frequency",
+     "name": "Word Frequency",
+     "similarity": 0.401,
+     "downloads": 3132,
+     "url": "https://obsidian.md/plugins?id=word-frequency"
     },
     {
-     "id": "consecutive-lists",
-     "name": "Consecutive Lists",
-     "similarity": 0.279,
-     "downloads": 2009,
-     "url": "https://obsidian.md/plugins?id=consecutive-lists"
+     "id": "disable-tabs",
+     "name": "Disable Tabs",
+     "similarity": 0.394,
+     "downloads": 6365,
+     "url": "https://obsidian.md/plugins?id=disable-tabs"
     },
     {
-     "id": "link-range",
-     "name": "Link Range",
-     "similarity": 0.256,
-     "downloads": 5073,
-     "url": "https://obsidian.md/plugins?id=link-range"
+     "id": "sync-auto-save",
+     "name": "sync-auto-save",
+     "similarity": 0.323,
+     "downloads": 95,
+     "url": "https://obsidian.md/plugins?id=sync-auto-save"
     },
     {
-     "id": "insert-multiple-attachments",
-     "name": "Insert Multiple Attachments",
-     "similarity": 0.23,
-     "downloads": 8076,
-     "url": "https://obsidian.md/plugins?id=insert-multiple-attachments"
+     "id": "custom-save",
+     "name": "Custom save",
+     "similarity": 0.252,
+     "downloads": 3919,
+     "url": "https://obsidian.md/plugins?id=custom-save"
     },
     {
-     "id": "obsidian-copy-block-link",
-     "name": "Copy Block Link",
-     "similarity": 0.224,
-     "downloads": 72507,
-     "url": "https://obsidian.md/plugins?id=obsidian-copy-block-link"
+     "id": "note-promixity",
+     "name": "Lookalike",
+     "similarity": 0.223,
+     "downloads": 2138,
+     "url": "https://obsidian.md/plugins?id=note-promixity"
     }
    ],
    "evidence": [
     {
-     "title": "A general format for specifying links to a part of note (multiple paragraphs, ranges) / Embedding Multiple Consecutive Headings Or Blocks",
-     "url": "https://forum.obsidian.md/t/a-general-format-for-specifying-links-to-a-part-of-note-multiple-paragraphs-ranges-embedding-multiple-consecutive-headings-or-blocks/19962",
-     "likes": 253,
-     "created": "2021-06-22"
+     "title": "Disable auto-save or change frequency",
+     "url": "https://forum.obsidian.md/t/disable-auto-save-or-change-frequency/14230",
+     "likes": 461,
+     "created": "2021-03-08"
     }
    ]
   },
   {
-   "id": "gap-52025",
-   "title": "Ignore/exclude completely files or a folder from all obsidian indexers and parsers",
+   "id": "gap-37708",
+   "title": "Add counters/markers for headings and blocks that are referenced somewhere else",
    "keywords": [
-    "parsers",
-    "indexers",
-    "completely",
-    "ignore"
+    "somewhere",
+    "else",
+    "referenced",
+    "counter"
    ],
    "requests": 1,
-   "likes": 349,
-   "views": 26827,
-   "status": "partly-covered",
-   "coverage": 0.364,
-   "rank": 95.2,
+   "likes": 202,
+   "views": 7136,
+   "status": "likely-gap",
+   "coverage": 0.276,
+   "rank": 90.9,
    "appLevel": false,
-   "firstRequested": "2023-01-11",
-   "lastActive": "2026-08-05",
+   "firstRequested": "2022-05-19",
+   "lastActive": "2026-10-06",
    "closestPlugins": [
     {
-     "id": "file-ignore",
-     "name": "File Ignore",
-     "similarity": 0.364,
-     "downloads": 4539,
-     "url": "https://obsidian.md/plugins?id=file-ignore"
+     "id": "custom-counter",
+     "name": "Custom Counter",
+     "similarity": 0.276,
+     "downloads": 147,
+     "url": "https://obsidian.md/plugins?id=custom-counter"
     },
     {
-     "id": "obsidian-link-indexer",
-     "name": "Link indexer",
-     "similarity": 0.298,
-     "downloads": 8989,
-     "url": "https://obsidian.md/plugins?id=obsidian-link-indexer"
+     "id": "header-counter",
+     "name": "Header Counter",
+     "similarity": 0.245,
+     "downloads": 870,
+     "url": "https://obsidian.md/plugins?id=header-counter"
     },
     {
-     "id": "concept-indexer",
-     "name": "Concept Indexer",
-     "similarity": 0.275,
-     "downloads": 71,
-     "url": "https://obsidian.md/plugins?id=concept-indexer"
+     "id": "headings-indicator",
+     "name": "Headings Indicator",
+     "similarity": 0.243,
+     "downloads": 520,
+     "url": "https://obsidian.md/plugins?id=headings-indicator"
     },
     {
-     "id": "ignore",
-     "name": "Ignore",
-     "similarity": 0.269,
-     "downloads": 1329,
-     "url": "https://obsidian.md/plugins?id=ignore"
+     "id": "reading-markers",
+     "name": "Reading Markers",
+     "similarity": 0.217,
+     "downloads": 173,
+     "url": "https://obsidian.md/plugins?id=reading-markers"
     },
     {
-     "id": "scripture-indexer",
-     "name": "Scripture Indexer",
-     "similarity": 0.269,
-     "downloads": 786,
-     "url": "https://obsidian.md/plugins?id=scripture-indexer"
+     "id": "headings-in-explorer",
+     "name": "Headings in Explorer",
+     "similarity": 0.198,
+     "downloads": 2354,
+     "url": "https://obsidian.md/plugins?id=headings-in-explorer"
     }
    ],
    "evidence": [
     {
-     "title": "Ignore/exclude completely files or a folder from all obsidian indexers and parsers",
-     "url": "https://forum.obsidian.md/t/ignore-exclude-completely-files-or-a-folder-from-all-obsidian-indexers-and-parsers/52025",
-     "likes": 349,
-     "created": "2023-01-11"
+     "title": "Add counters/markers for headings and blocks that are referenced somewhere else",
+     "url": "https://forum.obsidian.md/t/add-counters-markers-for-headings-and-blocks-that-are-referenced-somewhere-else/37708",
+     "likes": 202,
+     "created": "2022-05-19"
     }
    ]
   },
@@ -637,10 +701,10 @@
    ],
    "requests": 2,
    "likes": 405,
-   "views": 22898,
+   "views": 23120,
    "status": "partly-covered",
-   "coverage": 0.389,
-   "rank": 90.4,
+   "coverage": 0.39,
+   "rank": 89.5,
    "appLevel": true,
    "firstRequested": "2020-05-21",
    "lastActive": "2026-09-11",
@@ -648,36 +712,36 @@
     {
      "id": "outline-plus",
      "name": "Outline++",
-     "similarity": 0.436,
-     "downloads": 3712,
+     "similarity": 0.438,
+     "downloads": 3734,
      "url": "https://obsidian.md/plugins?id=outline-plus"
     },
     {
      "id": "default-query-in-backlink",
      "name": "Default query in backlinks",
      "similarity": 0.362,
-     "downloads": 5505,
+     "downloads": 5560,
      "url": "https://obsidian.md/plugins?id=default-query-in-backlink"
     },
     {
      "id": "jsonpath-vault-query",
      "name": "Local JSON Queries",
      "similarity": 0.36,
-     "downloads": 42,
+     "downloads": 61,
      "url": "https://obsidian.md/plugins?id=jsonpath-vault-query"
     },
     {
      "id": "outline-math",
      "name": "Outline Math",
-     "similarity": 0.356,
-     "downloads": 38,
+     "similarity": 0.358,
+     "downloads": 53,
      "url": "https://obsidian.md/plugins?id=outline-math"
     },
     {
      "id": "searchpp",
      "name": "Search++",
-     "similarity": 0.341,
-     "downloads": 8162,
+     "similarity": 0.339,
+     "downloads": 8271,
      "url": "https://obsidian.md/plugins?id=searchpp"
     }
    ],
@@ -697,134 +761,6 @@
    ]
   },
   {
-   "id": "gap-37708",
-   "title": "Add counters/markers for headings and blocks that are referenced somewhere else",
-   "keywords": [
-    "somewhere",
-    "else",
-    "referenced",
-    "counter"
-   ],
-   "requests": 1,
-   "likes": 202,
-   "views": 7035,
-   "status": "likely-gap",
-   "coverage": 0.278,
-   "rank": 90.1,
-   "appLevel": false,
-   "firstRequested": "2022-05-19",
-   "lastActive": "2026-10-06",
-   "closestPlugins": [
-    {
-     "id": "custom-counter",
-     "name": "Custom Counter",
-     "similarity": 0.278,
-     "downloads": 124,
-     "url": "https://obsidian.md/plugins?id=custom-counter"
-    },
-    {
-     "id": "header-counter",
-     "name": "Header Counter",
-     "similarity": 0.247,
-     "downloads": 864,
-     "url": "https://obsidian.md/plugins?id=header-counter"
-    },
-    {
-     "id": "headings-indicator",
-     "name": "Headings Indicator",
-     "similarity": 0.244,
-     "downloads": 512,
-     "url": "https://obsidian.md/plugins?id=headings-indicator"
-    },
-    {
-     "id": "reading-markers",
-     "name": "Reading Markers",
-     "similarity": 0.219,
-     "downloads": 162,
-     "url": "https://obsidian.md/plugins?id=reading-markers"
-    },
-    {
-     "id": "word-counter-session",
-     "name": "Word Counter Session",
-     "similarity": 0.198,
-     "downloads": 509,
-     "url": "https://obsidian.md/plugins?id=word-counter-session"
-    }
-   ],
-   "evidence": [
-    {
-     "title": "Add counters/markers for headings and blocks that are referenced somewhere else",
-     "url": "https://forum.obsidian.md/t/add-counters-markers-for-headings-and-blocks-that-are-referenced-somewhere-else/37708",
-     "likes": 202,
-     "created": "2022-05-19"
-    }
-   ]
-  },
-  {
-   "id": "gap-14230",
-   "title": "Disable auto-save or change frequency",
-   "keywords": [
-    "frequency",
-    "disable",
-    "change",
-    "save"
-   ],
-   "requests": 1,
-   "likes": 461,
-   "views": 28795,
-   "status": "partly-covered",
-   "coverage": 0.406,
-   "rank": 86.9,
-   "appLevel": false,
-   "firstRequested": "2021-03-08",
-   "lastActive": "2026-07-31",
-   "closestPlugins": [
-    {
-     "id": "word-frequency",
-     "name": "Word Frequency",
-     "similarity": 0.406,
-     "downloads": 3026,
-     "url": "https://obsidian.md/plugins?id=word-frequency"
-    },
-    {
-     "id": "disable-tabs",
-     "name": "Disable Tabs",
-     "similarity": 0.395,
-     "downloads": 6232,
-     "url": "https://obsidian.md/plugins?id=disable-tabs"
-    },
-    {
-     "id": "sync-auto-save",
-     "name": "sync-auto-save",
-     "similarity": 0.32,
-     "downloads": 76,
-     "url": "https://obsidian.md/plugins?id=sync-auto-save"
-    },
-    {
-     "id": "custom-save",
-     "name": "Custom save",
-     "similarity": 0.252,
-     "downloads": 3901,
-     "url": "https://obsidian.md/plugins?id=custom-save"
-    },
-    {
-     "id": "note-promixity",
-     "name": "Lookalike",
-     "similarity": 0.223,
-     "downloads": 2091,
-     "url": "https://obsidian.md/plugins?id=note-promixity"
-    }
-   ],
-   "evidence": [
-    {
-     "title": "Disable auto-save or change frequency",
-     "url": "https://forum.obsidian.md/t/disable-auto-save-or-change-frequency/14230",
-     "likes": 461,
-     "created": "2021-03-08"
-    }
-   ]
-  },
-  {
    "id": "gap-31955",
    "title": "Hepta as a Plugin",
    "keywords": [
@@ -832,7 +768,7 @@
    ],
    "requests": 1,
    "likes": 83,
-   "views": 10739,
+   "views": 10764,
    "status": "likely-gap",
    "coverage": 0,
    "rank": 84,
@@ -860,10 +796,10 @@
    ],
    "requests": 1,
    "likes": 352,
-   "views": 12643,
+   "views": 12830,
    "status": "partly-covered",
-   "coverage": 0.386,
-   "rank": 80.5,
+   "coverage": 0.384,
+   "rank": 81.9,
    "appLevel": false,
    "firstRequested": "2021-10-09",
    "lastActive": "2026-10-23",
@@ -871,37 +807,37 @@
     {
      "id": "heading-link-sync",
      "name": "Heading Link Sync",
-     "similarity": 0.386,
-     "downloads": 226,
+     "similarity": 0.384,
+     "downloads": 267,
      "url": "https://obsidian.md/plugins?id=heading-link-sync"
     },
     {
      "id": "frontmatter-modified-date",
      "name": "Update modified date",
-     "similarity": 0.355,
-     "downloads": 60424,
+     "similarity": 0.354,
+     "downloads": 60890,
      "url": "https://obsidian.md/plugins?id=frontmatter-modified-date"
+    },
+    {
+     "id": "bases-rename-sync",
+     "name": "Bases Rename Sync",
+     "similarity": 0.278,
+     "downloads": 11,
+     "url": "https://obsidian.md/plugins?id=bases-rename-sync"
     },
     {
      "id": "obsidian-copy-block-link",
      "name": "Copy Block Link",
      "similarity": 0.258,
-     "downloads": 72507,
+     "downloads": 72730,
      "url": "https://obsidian.md/plugins?id=obsidian-copy-block-link"
     },
     {
      "id": "obsidian-list-modified",
      "name": "List Modified",
-     "similarity": 0.24,
-     "downloads": 16099,
+     "similarity": 0.237,
+     "downloads": 16112,
      "url": "https://obsidian.md/plugins?id=obsidian-list-modified"
-    },
-    {
-     "id": "update-time-updater",
-     "name": "Update Time Updater",
-     "similarity": 0.231,
-     "downloads": 2222,
-     "url": "https://obsidian.md/plugins?id=update-time-updater"
     }
    ],
    "evidence": [
@@ -910,68 +846,6 @@
      "url": "https://forum.obsidian.md/t/automatic-inline-update-of-links-to-headings-and-blocks-when-they-are-modified-rename-header-with-no-extra-dialog-window/25412",
      "likes": 352,
      "created": "2021-10-09"
-    }
-   ]
-  },
-  {
-   "id": "gap-19050",
-   "title": "Any way to integrate Grammarly as plugin?",
-   "keywords": [
-    "grammarly",
-    "integrate"
-   ],
-   "requests": 1,
-   "likes": 151,
-   "views": 35992,
-   "status": "likely-gap",
-   "coverage": 0.25,
-   "rank": 76,
-   "appLevel": false,
-   "firstRequested": "2021-05-31",
-   "lastActive": "2023-11-28",
-   "closestPlugins": [
-    {
-     "id": "smart-chatgpt",
-     "name": "Smart Chat",
-     "similarity": 0.25,
-     "downloads": 47794,
-     "url": "https://obsidian.md/plugins?id=smart-chatgpt"
-    },
-    {
-     "id": "simple-microsoft-todo",
-     "name": "Simple Microsoft To Do",
-     "similarity": 0.219,
-     "downloads": 2989,
-     "url": "https://obsidian.md/plugins?id=simple-microsoft-todo"
-    },
-    {
-     "id": "terminal",
-     "name": "Terminal",
-     "similarity": 0.207,
-     "downloads": 466541,
-     "url": "https://obsidian.md/plugins?id=terminal"
-    },
-    {
-     "id": "obsidian-git",
-     "name": "Git",
-     "similarity": 0.2,
-     "downloads": 3388484,
-     "url": "https://obsidian.md/plugins?id=obsidian-git"
-    },
-    {
-     "id": "todoist-text",
-     "name": "Todoist Text",
-     "similarity": 0.194,
-     "downloads": 18789,
-     "url": "https://obsidian.md/plugins?id=todoist-text"
-    }
-   ],
-   "evidence": [
-    {
-     "title": "Any way to integrate Grammarly as plugin?",
-     "url": "https://forum.obsidian.md/t/any-way-to-integrate-grammarly-as-plugin/19050",
-     "likes": 151,
-     "created": "2021-05-31"
     }
    ]
   },
@@ -986,10 +860,10 @@
    ],
    "requests": 1,
    "likes": 364,
-   "views": 21795,
+   "views": 21998,
    "status": "partly-covered",
-   "coverage": 0.396,
-   "rank": 75.9,
+   "coverage": 0.395,
+   "rank": 76.6,
    "appLevel": false,
    "firstRequested": "2020-12-22",
    "lastActive": "2026-10-01",
@@ -997,36 +871,36 @@
     {
      "id": "default-template",
      "name": "Default Template",
-     "similarity": 0.396,
-     "downloads": 9076,
+     "similarity": 0.395,
+     "downloads": 9346,
      "url": "https://obsidian.md/plugins?id=default-template"
     },
     {
      "id": "new-note-fixer",
      "name": "New Note Fixer",
-     "similarity": 0.346,
-     "downloads": 6601,
+     "similarity": 0.344,
+     "downloads": 6678,
      "url": "https://obsidian.md/plugins?id=new-note-fixer"
-    },
-    {
-     "id": "template-by-note-name",
-     "name": "Template by Note Name",
-     "similarity": 0.257,
-     "downloads": 1417,
-     "url": "https://obsidian.md/plugins?id=template-by-note-name"
     },
     {
      "id": "default-view-mode",
      "name": "Default View Mode",
      "similarity": 0.257,
-     "downloads": 1883,
+     "downloads": 1901,
      "url": "https://obsidian.md/plugins?id=default-view-mode"
+    },
+    {
+     "id": "template-by-note-name",
+     "name": "Template by Note Name",
+     "similarity": 0.256,
+     "downloads": 1427,
+     "url": "https://obsidian.md/plugins?id=template-by-note-name"
     },
     {
      "id": "template-folder",
      "name": "Template Folder",
-     "similarity": 0.247,
-     "downloads": 1350,
+     "similarity": 0.246,
+     "downloads": 1357,
      "url": "https://obsidian.md/plugins?id=template-folder"
     }
    ],
@@ -1050,10 +924,10 @@
    ],
    "requests": 1,
    "likes": 136,
-   "views": 18245,
+   "views": 18317,
    "status": "likely-gap",
-   "coverage": 0.225,
-   "rank": 75.4,
+   "coverage": 0.221,
+   "rank": 76.4,
    "appLevel": true,
    "firstRequested": "2020-08-29",
    "lastActive": "2024-08-23",
@@ -1061,37 +935,37 @@
     {
      "id": "just-calendar",
      "name": "Just Calendar",
-     "similarity": 0.225,
-     "downloads": 1504,
+     "similarity": 0.221,
+     "downloads": 1514,
      "url": "https://obsidian.md/plugins?id=just-calendar"
     },
     {
      "id": "core-habits",
      "name": "Core Habits",
-     "similarity": 0.204,
-     "downloads": 3979,
+     "similarity": 0.201,
+     "downloads": 4016,
      "url": "https://obsidian.md/plugins?id=core-habits"
     },
     {
      "id": "obsidian-core-search-assistant-plugin",
      "name": "Core Search Assistant",
-     "similarity": 0.199,
-     "downloads": 37018,
+     "similarity": 0.195,
+     "downloads": 37333,
      "url": "https://obsidian.md/plugins?id=obsidian-core-search-assistant-plugin"
     },
     {
      "id": "github-copilot",
      "name": "GitHub Copilot",
-     "similarity": 0.192,
-     "downloads": 47754,
+     "similarity": 0.193,
+     "downloads": 48112,
      "url": "https://obsidian.md/plugins?id=github-copilot"
     },
     {
-     "id": "better-file-properties-view",
-     "name": "Better File Properties View",
-     "similarity": 0.175,
-     "downloads": 1132,
-     "url": "https://obsidian.md/plugins?id=better-file-properties-view"
+     "id": "line-multi-selector",
+     "name": "line-multi-selector",
+     "similarity": 0.174,
+     "downloads": 702,
+     "url": "https://obsidian.md/plugins?id=line-multi-selector"
     }
    ],
    "evidence": [
@@ -1100,6 +974,68 @@
      "url": "https://forum.obsidian.md/t/obsidian-core-implement-text-autocorrection/5022",
      "likes": 136,
      "created": "2020-08-29"
+    }
+   ]
+  },
+  {
+   "id": "gap-19050",
+   "title": "Any way to integrate Grammarly as plugin?",
+   "keywords": [
+    "grammarly",
+    "integrate"
+   ],
+   "requests": 1,
+   "likes": 151,
+   "views": 36088,
+   "status": "likely-gap",
+   "coverage": 0.251,
+   "rank": 75.7,
+   "appLevel": false,
+   "firstRequested": "2021-05-31",
+   "lastActive": "2023-11-28",
+   "closestPlugins": [
+    {
+     "id": "smart-chatgpt",
+     "name": "Smart Chat",
+     "similarity": 0.251,
+     "downloads": 48490,
+     "url": "https://obsidian.md/plugins?id=smart-chatgpt"
+    },
+    {
+     "id": "simple-microsoft-todo",
+     "name": "Simple Microsoft To Do",
+     "similarity": 0.22,
+     "downloads": 3033,
+     "url": "https://obsidian.md/plugins?id=simple-microsoft-todo"
+    },
+    {
+     "id": "terminal",
+     "name": "Terminal",
+     "similarity": 0.207,
+     "downloads": 471944,
+     "url": "https://obsidian.md/plugins?id=terminal"
+    },
+    {
+     "id": "obsidian-git",
+     "name": "Git",
+     "similarity": 0.201,
+     "downloads": 3427654,
+     "url": "https://obsidian.md/plugins?id=obsidian-git"
+    },
+    {
+     "id": "todoist-text",
+     "name": "Todoist Text",
+     "similarity": 0.195,
+     "downloads": 18816,
+     "url": "https://obsidian.md/plugins?id=todoist-text"
+    }
+   ],
+   "evidence": [
+    {
+     "title": "Any way to integrate Grammarly as plugin?",
+     "url": "https://forum.obsidian.md/t/any-way-to-integrate-grammarly-as-plugin/19050",
+     "likes": 151,
+     "created": "2021-05-31"
     }
    ]
   },
@@ -1113,48 +1049,48 @@
     "value"
    ],
    "requests": 1,
-   "likes": 431,
-   "views": 18919,
+   "likes": 432,
+   "views": 19111,
    "status": "partly-covered",
-   "coverage": 0.414,
-   "rank": 74.3,
+   "coverage": 0.415,
+   "rank": 73.6,
    "appLevel": false,
    "firstRequested": "2023-07-26",
-   "lastActive": "2026-08-21",
+   "lastActive": "2026-11-03",
    "closestPlugins": [
     {
      "id": "property-values-browser",
      "name": "Property Values Browser",
-     "similarity": 0.414,
-     "downloads": 1157,
+     "similarity": 0.415,
+     "downloads": 1202,
      "url": "https://obsidian.md/plugins?id=property-values-browser"
     },
     {
      "id": "tag-wrangler",
      "name": "Tag Wrangler",
-     "similarity": 0.4,
-     "downloads": 1144760,
+     "similarity": 0.401,
+     "downloads": 1151164,
      "url": "https://obsidian.md/plugins?id=tag-wrangler"
     },
     {
      "id": "property-over-file-name",
      "name": "Property Over File Name",
      "similarity": 0.399,
-     "downloads": 10589,
+     "downloads": 10635,
      "url": "https://obsidian.md/plugins?id=property-over-file-name"
     },
     {
      "id": "better-file-properties-view",
      "name": "Better File Properties View",
-     "similarity": 0.394,
-     "downloads": 1132,
+     "similarity": 0.395,
+     "downloads": 1140,
      "url": "https://obsidian.md/plugins?id=better-file-properties-view"
     },
     {
      "id": "property-order",
      "name": "Property Order",
-     "similarity": 0.384,
-     "downloads": 2827,
+     "similarity": 0.385,
+     "downloads": 2869,
      "url": "https://obsidian.md/plugins?id=property-order"
     }
    ],
@@ -1162,7 +1098,7 @@
     {
      "title": "Properties Wrangler: Add a way to \"Insert\", \"Rename\" and \"Remove\" properties and values in all files",
      "url": "https://forum.obsidian.md/t/properties-wrangler-add-a-way-to-insert-rename-and-remove-properties-and-values-in-all-files/63806",
-     "likes": 431,
+     "likes": 432,
      "created": "2023-07-26"
     }
    ]
@@ -1178,10 +1114,10 @@
    ],
    "requests": 1,
    "likes": 210,
-   "views": 13722,
+   "views": 13845,
    "status": "likely-gap",
-   "coverage": 0.334,
-   "rank": 70.1,
+   "coverage": 0.329,
+   "rank": 72.2,
    "appLevel": true,
    "firstRequested": "2020-06-17",
    "lastActive": "2021-09-28",
@@ -1189,36 +1125,36 @@
     {
      "id": "personal-os",
      "name": "Personal OS",
-     "similarity": 0.334,
-     "downloads": 2574,
+     "similarity": 0.329,
+     "downloads": 2659,
      "url": "https://obsidian.md/plugins?id=personal-os"
     },
     {
      "id": "canvas-card-hook",
      "name": "Canvas Card Hook",
-     "similarity": 0.267,
-     "downloads": 68,
+     "similarity": 0.268,
+     "downloads": 86,
      "url": "https://obsidian.md/plugins?id=canvas-card-hook"
     },
     {
      "id": "content-os",
      "name": "Content OS",
-     "similarity": 0.25,
-     "downloads": 374,
+     "similarity": 0.245,
+     "downloads": 378,
      "url": "https://obsidian.md/plugins?id=content-os"
     },
     {
      "id": "mac-now-playing",
      "name": "Mac Now Playing",
-     "similarity": 0.242,
-     "downloads": 460,
+     "similarity": 0.243,
+     "downloads": 472,
      "url": "https://obsidian.md/plugins?id=mac-now-playing"
     },
     {
      "id": "one-way-backlinks",
      "name": "One-way Backlinks",
-     "similarity": 0.235,
-     "downloads": 2,
+     "similarity": 0.237,
+     "downloads": 23,
      "url": "https://obsidian.md/plugins?id=one-way-backlinks"
     }
    ],
@@ -1242,47 +1178,47 @@
    ],
    "requests": 2,
    "likes": 199,
-   "views": 24615,
+   "views": 24738,
    "status": "likely-gap",
-   "coverage": 0.33,
-   "rank": 68.3,
+   "coverage": 0.331,
+   "rank": 67.9,
    "appLevel": false,
    "firstRequested": "2020-09-19",
    "lastActive": "2026-04-18",
    "closestPlugins": [
     {
-     "id": "url-display",
-     "name": "URL Display",
-     "similarity": 0.335,
-     "downloads": 5303,
-     "url": "https://obsidian.md/plugins?id=url-display"
-    },
-    {
      "id": "clip-link",
      "name": "Clip Link",
-     "similarity": 0.335,
-     "downloads": 963,
+     "similarity": 0.338,
+     "downloads": 972,
      "url": "https://obsidian.md/plugins?id=clip-link"
+    },
+    {
+     "id": "url-display",
+     "name": "URL Display",
+     "similarity": 0.332,
+     "downloads": 5310,
+     "url": "https://obsidian.md/plugins?id=url-display"
     },
     {
      "id": "publish-url",
      "name": "Publish url",
-     "similarity": 0.326,
-     "downloads": 3307,
+     "similarity": 0.323,
+     "downloads": 3320,
      "url": "https://obsidian.md/plugins?id=publish-url"
     },
     {
      "id": "url-formatter",
      "name": "URL Formatter",
-     "similarity": 0.306,
-     "downloads": 1628,
+     "similarity": 0.304,
+     "downloads": 1637,
      "url": "https://obsidian.md/plugins?id=url-formatter"
     },
     {
      "id": "obsidian-copy-search-url",
      "name": "Copy Search URL",
-     "similarity": 0.293,
-     "downloads": 5753,
+     "similarity": 0.292,
+     "downloads": 5768,
      "url": "https://obsidian.md/plugins?id=obsidian-copy-search-url"
     }
    ],
@@ -1310,10 +1246,10 @@
    ],
    "requests": 1,
    "likes": 174,
-   "views": 12117,
+   "views": 12163,
    "status": "likely-gap",
-   "coverage": 0.312,
-   "rank": 65.8,
+   "coverage": 0.309,
+   "rank": 66.9,
    "appLevel": false,
    "firstRequested": "2020-05-21",
    "lastActive": "2024-03-27",
@@ -1321,37 +1257,37 @@
     {
      "id": "lowlight",
      "name": "Lowlight",
-     "similarity": 0.312,
-     "downloads": 344,
+     "similarity": 0.309,
+     "downloads": 349,
      "url": "https://obsidian.md/plugins?id=lowlight"
     },
     {
      "id": "inline-icons",
      "name": "Inline Icons",
-     "similarity": 0.28,
-     "downloads": 548,
+     "similarity": 0.278,
+     "downloads": 579,
      "url": "https://obsidian.md/plugins?id=inline-icons"
     },
     {
      "id": "inkwell",
      "name": "Inkwell",
-     "similarity": 0.275,
-     "downloads": 47,
+     "similarity": 0.272,
+     "downloads": 97,
      "url": "https://obsidian.md/plugins?id=inkwell"
+    },
+    {
+     "id": "copy-document-as-html",
+     "name": "Copy document as HTML",
+     "similarity": 0.268,
+     "downloads": 43126,
+     "url": "https://obsidian.md/plugins?id=copy-document-as-html"
     },
     {
      "id": "dayspann",
      "name": "dayspann",
-     "similarity": 0.269,
-     "downloads": 114,
+     "similarity": 0.266,
+     "downloads": 125,
      "url": "https://obsidian.md/plugins?id=dayspann"
-    },
-    {
-     "id": "meridian-timeline",
-     "name": "Meridian Timeline",
-     "similarity": 0.268,
-     "downloads": 187,
-     "url": "https://obsidian.md/plugins?id=meridian-timeline"
     }
    ],
    "evidence": [
@@ -1374,10 +1310,10 @@
    ],
    "requests": 2,
    "likes": 947,
-   "views": 209472,
+   "views": 209936,
    "status": "partly-covered",
-   "coverage": 0.469,
-   "rank": 58.8,
+   "coverage": 0.468,
+   "rank": 60.7,
    "appLevel": false,
    "firstRequested": "2020-07-11",
    "lastActive": "2026-10-09",
@@ -1385,36 +1321,36 @@
     {
      "id": "draw-in-canvas",
      "name": "Draw in Canvas",
-     "similarity": 0.534,
-     "downloads": 17384,
+     "similarity": 0.532,
+     "downloads": 18239,
      "url": "https://obsidian.md/plugins?id=draw-in-canvas"
     },
     {
      "id": "search-in-canvas",
      "name": "Search In Canvas",
-     "similarity": 0.416,
-     "downloads": 9852,
+     "similarity": 0.418,
+     "downloads": 9955,
      "url": "https://obsidian.md/plugins?id=search-in-canvas"
     },
     {
      "id": "ink",
      "name": "Ink",
-     "similarity": 0.412,
-     "downloads": 221238,
+     "similarity": 0.415,
+     "downloads": 224689,
      "url": "https://obsidian.md/plugins?id=ink"
     },
     {
      "id": "ink-layer",
      "name": "Inkplane",
-     "similarity": 0.409,
-     "downloads": 2637,
+     "similarity": 0.412,
+     "downloads": 2696,
      "url": "https://obsidian.md/plugins?id=ink-layer"
     },
     {
      "id": "simple-sketch",
      "name": "simple-sketch",
-     "similarity": 0.392,
-     "downloads": 5938,
+     "similarity": 0.393,
+     "downloads": 6106,
      "url": "https://obsidian.md/plugins?id=simple-sketch"
     }
    ],
@@ -1444,10 +1380,10 @@
    ],
    "requests": 1,
    "likes": 291,
-   "views": 8378,
+   "views": 8484,
    "status": "partly-covered",
-   "coverage": 0.41,
-   "rank": 52.6,
+   "coverage": 0.407,
+   "rank": 54.3,
    "appLevel": false,
    "firstRequested": "2022-02-15",
    "lastActive": "2026-02-05",
@@ -1455,37 +1391,37 @@
     {
      "id": "advanced-search-ui",
      "name": "Advanced Search UI",
-     "similarity": 0.41,
-     "downloads": 5484,
+     "similarity": 0.407,
+     "downloads": 5549,
      "url": "https://obsidian.md/plugins?id=advanced-search-ui"
     },
     {
      "id": "query-json",
      "name": "Query JSON",
      "similarity": 0.315,
-     "downloads": 5536,
+     "downloads": 5557,
      "url": "https://obsidian.md/plugins?id=query-json"
     },
     {
      "id": "cjk-cross-search",
      "name": "CJK Cross-Script Search",
-     "similarity": 0.312,
-     "downloads": 151,
+     "similarity": 0.313,
+     "downloads": 155,
      "url": "https://obsidian.md/plugins?id=cjk-cross-search"
     },
     {
      "id": "query-control",
      "name": "Query Control",
      "similarity": 0.294,
-     "downloads": 984,
+     "downloads": 1219,
      "url": "https://obsidian.md/plugins?id=query-control"
     },
     {
-     "id": "default-query-in-backlink",
-     "name": "Default query in backlinks",
+     "id": "better-search-views",
+     "name": "Better Search Views",
      "similarity": 0.287,
-     "downloads": 5505,
-     "url": "https://obsidian.md/plugins?id=default-query-in-backlink"
+     "downloads": 51957,
+     "url": "https://obsidian.md/plugins?id=better-search-views"
     }
    ],
    "evidence": [
@@ -1508,10 +1444,10 @@
    ],
    "requests": 2,
    "likes": 160,
-   "views": 36284,
-   "status": "likely-gap",
-   "coverage": 0.349,
-   "rank": 48.9,
+   "views": 36489,
+   "status": "partly-covered",
+   "coverage": 0.351,
+   "rank": 48.3,
    "appLevel": true,
    "firstRequested": "2021-12-08",
    "lastActive": "2026-08-29",
@@ -1519,36 +1455,36 @@
     {
      "id": "headings-in-explorer",
      "name": "Headings in Explorer",
-     "similarity": 0.39,
-     "downloads": 2289,
+     "similarity": 0.392,
+     "downloads": 2354,
      "url": "https://obsidian.md/plugins?id=headings-in-explorer"
     },
     {
      "id": "quick-access-dashboard",
      "name": "Quick Access Dashboard",
-     "similarity": 0.348,
-     "downloads": 369,
+     "similarity": 0.35,
+     "downloads": 391,
      "url": "https://obsidian.md/plugins?id=quick-access-dashboard"
     },
     {
      "id": "file-explorer-markdown-titles",
      "name": "File Explorer Markdown Titles",
-     "similarity": 0.334,
-     "downloads": 7600,
+     "similarity": 0.336,
+     "downloads": 7611,
      "url": "https://obsidian.md/plugins?id=file-explorer-markdown-titles"
     },
     {
      "id": "ios-tts",
      "name": "Full Document View for iOS TTS",
      "similarity": 0.323,
-     "downloads": 160,
+     "downloads": 174,
      "url": "https://obsidian.md/plugins?id=ios-tts"
     },
     {
      "id": "file-explorer-timestamps",
      "name": "File explorer timestamps",
-     "similarity": 0.296,
-     "downloads": 46,
+     "similarity": 0.298,
+     "downloads": 57,
      "url": "https://obsidian.md/plugins?id=file-explorer-timestamps"
     }
    ],
@@ -1578,10 +1514,10 @@
    ],
    "requests": 1,
    "likes": 98,
-   "views": 43433,
+   "views": 43505,
    "status": "likely-gap",
-   "coverage": 0.258,
-   "rank": 47.9,
+   "coverage": 0.257,
+   "rank": 48.1,
    "appLevel": false,
    "firstRequested": "2023-03-02",
    "lastActive": "2026-04-21",
@@ -1589,37 +1525,37 @@
     {
      "id": "obsidian-timeline",
      "name": "Timeline",
-     "similarity": 0.258,
-     "downloads": 96117,
+     "similarity": 0.257,
+     "downloads": 96478,
      "url": "https://obsidian.md/plugins?id=obsidian-timeline"
     },
     {
      "id": "markdown-timeline",
      "name": "Markdown Timeline",
-     "similarity": 0.249,
-     "downloads": 4357,
+     "similarity": 0.248,
+     "downloads": 4381,
      "url": "https://obsidian.md/plugins?id=markdown-timeline"
     },
     {
      "id": "tasks-timeline",
      "name": "Tasks Timeline",
      "similarity": 0.247,
-     "downloads": 2299,
+     "downloads": 2361,
      "url": "https://obsidian.md/plugins?id=tasks-timeline"
     },
     {
      "id": "interactive-timeline",
      "name": "Interactive Timeline",
-     "similarity": 0.244,
-     "downloads": 665,
+     "similarity": 0.243,
+     "downloads": 684,
      "url": "https://obsidian.md/plugins?id=interactive-timeline"
     },
     {
-     "id": "bases-timeline-view",
-     "name": "Bases Timeline View",
-     "similarity": 0.234,
-     "downloads": 7070,
-     "url": "https://obsidian.md/plugins?id=bases-timeline-view"
+     "id": "zettelkasten-outliner",
+     "name": "Zettelkasten Outliner",
+     "similarity": 0.236,
+     "downloads": 5015,
+     "url": "https://obsidian.md/plugins?id=zettelkasten-outliner"
     }
    ],
    "evidence": [
@@ -1630,19 +1566,83 @@
      "created": "2023-03-02"
     }
    ]
+  },
+  {
+   "id": "gap-16389",
+   "title": "Transclude \\ Embed external files (audio, videos, pdfs) present on the computer outside the vault",
+   "keywords": [
+    "transclude",
+    "present",
+    "computer",
+    "outside"
+   ],
+   "requests": 1,
+   "likes": 157,
+   "views": 17894,
+   "status": "partly-covered",
+   "coverage": 0.355,
+   "rank": 45.8,
+   "appLevel": false,
+   "firstRequested": "2021-04-12",
+   "lastActive": "2024-12-13",
+   "closestPlugins": [
+    {
+     "id": "external-file-embed-and-link",
+     "name": "External File Embed and Link",
+     "similarity": 0.355,
+     "downloads": 10112,
+     "url": "https://obsidian.md/plugins?id=external-file-embed-and-link"
+    },
+    {
+     "id": "pathlinker",
+     "name": "External File Linker",
+     "similarity": 0.304,
+     "downloads": 5478,
+     "url": "https://obsidian.md/plugins?id=pathlinker"
+    },
+    {
+     "id": "linker",
+     "name": "Linker",
+     "similarity": 0.286,
+     "downloads": 39,
+     "url": "https://obsidian.md/plugins?id=linker"
+    },
+    {
+     "id": "external-vault",
+     "name": "External Vault",
+     "similarity": 0.283,
+     "downloads": 2,
+     "url": "https://obsidian.md/plugins?id=external-vault"
+    },
+    {
+     "id": "external-attachments",
+     "name": "External Attachments",
+     "similarity": 0.276,
+     "downloads": 1038,
+     "url": "https://obsidian.md/plugins?id=external-attachments"
+    }
+   ],
+   "evidence": [
+    {
+     "title": "Transclude \\ Embed external files (audio, videos, pdfs) present on the computer outside the vault",
+     "url": "https://forum.obsidian.md/t/transclude-embed-external-files-audio-videos-pdfs-present-on-the-computer-outside-the-vault/16389",
+     "likes": 157,
+     "created": "2021-04-12"
+    }
+   ]
   }
  ],
  "maintainersWanted": [
   {
    "id": "highlightr-plugin",
    "name": "Highlightr",
-   "downloads": 745157,
-   "weeklyDownloads": 2947,
-   "quietMonths": 35.6,
+   "downloads": 748001,
+   "weeklyDownloads": 2844,
+   "quietMonths": 35.8,
    "lastActivity": "2023-11-15",
-   "openIssues": 79,
-   "stars": 810,
-   "score": 95.4,
+   "openIssues": 80,
+   "stars": 811,
+   "score": 95.8,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=highlightr-plugin",
@@ -1653,13 +1653,13 @@
   {
    "id": "obsidian-mind-map",
    "name": "Mind Map",
-   "downloads": 903715,
-   "weeklyDownloads": 2462,
-   "quietMonths": 32.2,
+   "downloads": 907820,
+   "weeklyDownloads": 4105,
+   "quietMonths": 32.5,
    "lastActivity": "2024-02-25",
-   "openIssues": 94,
-   "stars": 1430,
-   "score": 94,
+   "openIssues": 96,
+   "stars": 1435,
+   "score": 94.5,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=obsidian-mind-map",
@@ -1670,13 +1670,13 @@
   {
    "id": "obsidian-annotator",
    "name": "Annotator",
-   "downloads": 605293,
-   "weeklyDownloads": 1186,
-   "quietMonths": 33.8,
+   "downloads": 606635,
+   "weeklyDownloads": 1342,
+   "quietMonths": 34,
    "lastActivity": "2024-01-08",
    "openIssues": 271,
    "stars": 1778,
-   "score": 92.9,
+   "score": 93.2,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=obsidian-annotator",
@@ -1687,13 +1687,13 @@
   {
    "id": "calendar",
    "name": "Calendar",
-   "downloads": 3239092,
-   "weeklyDownloads": 18577,
-   "quietMonths": 28.4,
+   "downloads": 3258643,
+   "weeklyDownloads": 19551,
+   "quietMonths": 28.6,
    "lastActivity": "2024-06-22",
    "openIssues": 171,
-   "stars": 2288,
-   "score": 90.5,
+   "stars": 2292,
+   "score": 90.8,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=calendar",
@@ -1704,13 +1704,13 @@
   {
    "id": "obsidian-advanced-slides",
    "name": "Advanced Slides",
-   "downloads": 841405,
-   "weeklyDownloads": 625,
-   "quietMonths": 28.1,
+   "downloads": 842107,
+   "weeklyDownloads": 702,
+   "quietMonths": 28.4,
    "lastActivity": "2024-06-29",
    "openIssues": 119,
    "stars": 1266,
-   "score": 88.7,
+   "score": 89,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=obsidian-advanced-slides",
@@ -1721,13 +1721,13 @@
   {
    "id": "obsidian-banners",
    "name": "Banners",
-   "downloads": 359140,
-   "weeklyDownloads": 1179,
-   "quietMonths": 33.5,
+   "downloads": 360757,
+   "weeklyDownloads": 1617,
+   "quietMonths": 33.7,
    "lastActivity": "2024-01-18",
    "openIssues": 116,
    "stars": 817,
-   "score": 88,
+   "score": 88.3,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=obsidian-banners",
@@ -1738,13 +1738,13 @@
   {
    "id": "obsidian-pandoc",
    "name": "Pandoc Plugin",
-   "downloads": 565277,
-   "weeklyDownloads": 1665,
-   "quietMonths": 29.6,
+   "downloads": 566881,
+   "weeklyDownloads": 1604,
+   "quietMonths": 29.8,
    "lastActivity": "2024-05-15",
    "openIssues": 153,
-   "stars": 907,
-   "score": 87.1,
+   "stars": 908,
+   "score": 87.4,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=obsidian-pandoc",
@@ -1755,13 +1755,13 @@
   {
    "id": "note-refactor-obsidian",
    "name": "Note Refactor",
-   "downloads": 350875,
-   "weeklyDownloads": 1128,
-   "quietMonths": 33.3,
+   "downloads": 354442,
+   "weeklyDownloads": 3567,
+   "quietMonths": 33.6,
    "lastActivity": "2024-01-22",
-   "openIssues": 84,
-   "stars": 644,
-   "score": 86.5,
+   "openIssues": 85,
+   "stars": 645,
+   "score": 86.9,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=note-refactor-obsidian",
@@ -1772,13 +1772,13 @@
   {
    "id": "periodic-notes",
    "name": "Periodic Notes",
-   "downloads": 791678,
-   "weeklyDownloads": 4602,
-   "quietMonths": 26.3,
+   "downloads": 797881,
+   "weeklyDownloads": 6203,
+   "quietMonths": 26.5,
    "lastActivity": "2024-08-23",
    "openIssues": 158,
-   "stars": 1368,
-   "score": 85.9,
+   "stars": 1367,
+   "score": 86.2,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=periodic-notes",
@@ -1789,13 +1789,13 @@
   {
    "id": "remotely-save",
    "name": "Remotely Save",
-   "downloads": 2350275,
-   "weeklyDownloads": 16657,
-   "quietMonths": 23.7,
+   "downloads": 2366518,
+   "weeklyDownloads": 16243,
+   "quietMonths": 23.9,
    "lastActivity": "2024-11-10",
    "openIssues": 204,
-   "stars": 8291,
-   "score": 84.7,
+   "stars": 8310,
+   "score": 85,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=remotely-save",
@@ -1806,12 +1806,12 @@
   {
    "id": "cmenu-plugin",
    "name": "cMenu",
-   "downloads": 243040,
-   "weeklyDownloads": 602,
-   "quietMonths": 49.9,
+   "downloads": 243644,
+   "weeklyDownloads": 604,
+   "quietMonths": 50.1,
    "lastActivity": "2022-09-05",
    "openIssues": 43,
-   "stars": 481,
+   "stars": 482,
    "score": 82.3,
    "provisional": false,
    "evidence": {
@@ -1823,13 +1823,13 @@
   {
    "id": "card-board",
    "name": "CardBoard",
-   "downloads": 185275,
-   "weeklyDownloads": 1295,
-   "quietMonths": 32.2,
+   "downloads": 186729,
+   "weeklyDownloads": 1454,
+   "quietMonths": 32.5,
    "lastActivity": "2024-02-25",
-   "openIssues": 121,
-   "stars": 638,
-   "score": 80.7,
+   "openIssues": 122,
+   "stars": 640,
+   "score": 81,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=card-board",
@@ -1840,13 +1840,13 @@
   {
    "id": "obsidian-charts",
    "name": "Charts",
-   "downloads": 334404,
-   "weeklyDownloads": 1431,
-   "quietMonths": 28.4,
+   "downloads": 335879,
+   "weeklyDownloads": 1475,
+   "quietMonths": 28.7,
    "lastActivity": "2024-06-19",
    "openIssues": 74,
-   "stars": 808,
-   "score": 79.1,
+   "stars": 809,
+   "score": 79.5,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=obsidian-charts",
@@ -1857,13 +1857,13 @@
   {
    "id": "auto-note-mover",
    "name": "Auto Note Mover",
-   "downloads": 126876,
-   "weeklyDownloads": 807,
-   "quietMonths": 36.3,
+   "downloads": 127706,
+   "weeklyDownloads": 830,
+   "quietMonths": 36.5,
    "lastActivity": "2023-10-25",
    "openIssues": 61,
    "stars": 426,
-   "score": 78.9,
+   "score": 79,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=auto-note-mover",
@@ -1874,13 +1874,13 @@
   {
    "id": "obsidian-citation-plugin",
    "name": "Citations",
-   "downloads": 240411,
-   "weeklyDownloads": 687,
-   "quietMonths": 28.6,
+   "downloads": 242341,
+   "weeklyDownloads": 1930,
+   "quietMonths": 28.9,
    "lastActivity": "2024-06-13",
    "openIssues": 160,
-   "stars": 1342,
-   "score": 78.5,
+   "stars": 1346,
+   "score": 78.8,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=obsidian-citation-plugin",
@@ -1891,13 +1891,13 @@
   {
    "id": "obsidian-dictionary-plugin",
    "name": "Dictionary",
-   "downloads": 231579,
-   "weeklyDownloads": 599,
-   "quietMonths": 32.5,
+   "downloads": 232142,
+   "weeklyDownloads": 563,
+   "quietMonths": 32.8,
    "lastActivity": "2024-02-16",
    "openIssues": 31,
-   "stars": 438,
-   "score": 75.5,
+   "stars": 439,
+   "score": 75.8,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=obsidian-dictionary-plugin",
@@ -1908,13 +1908,13 @@
   {
    "id": "emoji-shortcodes",
    "name": "Emoji Shortcodes",
-   "downloads": 144730,
-   "weeklyDownloads": 507,
-   "quietMonths": 45.9,
+   "downloads": 145386,
+   "weeklyDownloads": 656,
+   "quietMonths": 46.1,
    "lastActivity": "2023-01-05",
    "openIssues": 24,
-   "stars": 231,
-   "score": 74.1,
+   "stars": 232,
+   "score": 74.2,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=emoji-shortcodes",
@@ -1925,13 +1925,13 @@
   {
    "id": "obsidian-auto-link-title",
    "name": "Auto Link Title",
-   "downloads": 391534,
-   "weeklyDownloads": 1461,
-   "quietMonths": 22.6,
+   "downloads": 392964,
+   "weeklyDownloads": 1430,
+   "quietMonths": 22.8,
    "lastActivity": "2024-12-15",
    "openIssues": 79,
-   "stars": 703,
-   "score": 73.6,
+   "stars": 705,
+   "score": 73.9,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=obsidian-auto-link-title",
@@ -1942,13 +1942,13 @@
   {
    "id": "multi-column-markdown",
    "name": "Multi-Column Markdown",
-   "downloads": 224269,
-   "weeklyDownloads": 911,
-   "quietMonths": 29.5,
+   "downloads": 225129,
+   "weeklyDownloads": 860,
+   "quietMonths": 29.7,
    "lastActivity": "2024-05-19",
    "openIssues": 44,
    "stars": 436,
-   "score": 73.6,
+   "score": 73.9,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=multi-column-markdown",
@@ -1957,32 +1957,15 @@
    }
   },
   {
-   "id": "oz-image-plugin",
-   "name": "Image in Editor",
-   "downloads": 367233,
-   "weeklyDownloads": 1028,
-   "quietMonths": 32.7,
-   "lastActivity": "2024-02-10",
-   "openIssues": 10,
-   "stars": 378,
-   "score": 72.8,
-   "provisional": false,
-   "evidence": {
-    "directory": "https://obsidian.md/plugins?id=oz-image-plugin",
-    "repository": "https://github.com/ozntel/oz-image-in-editor-obsidian",
-    "issues": "https://github.com/ozntel/oz-image-in-editor-obsidian/issues"
-   }
-  },
-  {
    "id": "obsidian-smart-typography",
    "name": "Smart Typography",
-   "downloads": 176453,
-   "weeklyDownloads": 1043,
-   "quietMonths": 31.1,
+   "downloads": 177450,
+   "weeklyDownloads": 997,
+   "quietMonths": 31.3,
    "lastActivity": "2024-03-30",
    "openIssues": 39,
    "stars": 344,
-   "score": 72.8,
+   "score": 73.2,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=obsidian-smart-typography",
@@ -1991,32 +1974,32 @@
    }
   },
   {
-   "id": "obsidian-icon-shortcodes",
-   "name": "Icon Shortcodes",
-   "downloads": 63882,
-   "weeklyDownloads": 273,
-   "quietMonths": 37,
-   "lastActivity": "2023-10-03",
-   "openIssues": 53,
-   "stars": 175,
-   "score": 72,
+   "id": "oz-image-plugin",
+   "name": "Image in Editor",
+   "downloads": 368392,
+   "weeklyDownloads": 1159,
+   "quietMonths": 33,
+   "lastActivity": "2024-02-10",
+   "openIssues": 10,
+   "stars": 378,
+   "score": 73.1,
    "provisional": false,
    "evidence": {
-    "directory": "https://obsidian.md/plugins?id=obsidian-icon-shortcodes",
-    "repository": "https://github.com/aidenlx/obsidian-icon-shortcodes",
-    "issues": "https://github.com/aidenlx/obsidian-icon-shortcodes/issues"
+    "directory": "https://obsidian.md/plugins?id=oz-image-plugin",
+    "repository": "https://github.com/ozntel/oz-image-in-editor-obsidian",
+    "issues": "https://github.com/ozntel/oz-image-in-editor-obsidian/issues"
    }
   },
   {
    "id": "folder-note-plugin",
    "name": "Folder Note",
-   "downloads": 141706,
-   "weeklyDownloads": 189,
-   "quietMonths": 27.4,
+   "downloads": 141966,
+   "weeklyDownloads": 260,
+   "quietMonths": 27.7,
    "lastActivity": "2024-07-20",
    "openIssues": 93,
-   "stars": 481,
-   "score": 71.9,
+   "stars": 483,
+   "score": 72.2,
    "provisional": false,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=folder-note-plugin",
@@ -2025,37 +2008,54 @@
    }
   },
   {
-   "id": "obsidian-timeline",
-   "name": "Timeline",
-   "downloads": 96117,
-   "weeklyDownloads": 379,
-   "quietMonths": 51.2,
-   "lastActivity": "2022-07-26",
-   "openIssues": 29,
-   "stars": 412,
-   "score": 71.8,
+   "id": "obsidian-icon-shortcodes",
+   "name": "Icon Shortcodes",
+   "downloads": 64270,
+   "weeklyDownloads": 388,
+   "quietMonths": 37.2,
+   "lastActivity": "2023-10-03",
+   "openIssues": 53,
+   "stars": 175,
+   "score": 72.1,
    "provisional": false,
    "evidence": {
-    "directory": "https://obsidian.md/plugins?id=obsidian-timeline",
-    "repository": "https://github.com/george-debug/obsidian-timeline",
-    "issues": "https://github.com/george-debug/obsidian-timeline/issues"
+    "directory": "https://obsidian.md/plugins?id=obsidian-icon-shortcodes",
+    "repository": "https://github.com/aidenlx/obsidian-icon-shortcodes",
+    "issues": "https://github.com/aidenlx/obsidian-icon-shortcodes/issues"
    }
   },
   {
-   "id": "pdf-plus",
-   "name": "PDF++",
-   "downloads": 873471,
-   "weeklyDownloads": 11734,
-   "quietMonths": 14.1,
-   "lastActivity": "2025-08-30",
-   "openIssues": 155,
-   "stars": 2516,
-   "score": 71.5,
+   "id": "obsidian-book-search-plugin",
+   "name": "Book Search",
+   "downloads": 238823,
+   "weeklyDownloads": 1018,
+   "quietMonths": 24.8,
+   "lastActivity": "2024-10-16",
+   "openIssues": 77,
+   "stars": 716,
+   "score": 71.9,
    "provisional": false,
    "evidence": {
-    "directory": "https://obsidian.md/plugins?id=pdf-plus",
-    "repository": "https://github.com/ryotaushio/obsidian-pdf-plus",
-    "issues": "https://github.com/ryotaushio/obsidian-pdf-plus/issues"
+    "directory": "https://obsidian.md/plugins?id=obsidian-book-search-plugin",
+    "repository": "https://github.com/anpigon/obsidian-book-search-plugin",
+    "issues": "https://github.com/anpigon/obsidian-book-search-plugin/issues"
+   }
+  },
+  {
+   "id": "cm-typewriter-scroll-obsidian",
+   "name": "Typewriter Scroll",
+   "downloads": 118091,
+   "weeklyDownloads": 881,
+   "quietMonths": 32.5,
+   "lastActivity": "2024-02-23",
+   "openIssues": 44,
+   "stars": 214,
+   "score": 71.9,
+   "provisional": false,
+   "evidence": {
+    "directory": "https://obsidian.md/plugins?id=cm-typewriter-scroll-obsidian",
+    "repository": "https://github.com/deathau/cm-typewriter-scroll-obsidian",
+    "issues": "https://github.com/deathau/cm-typewriter-scroll-obsidian/issues"
    }
   }
  ],
@@ -2063,7 +2063,7 @@
   {
    "id": "obsidian-full-calendar",
    "name": "Full Calendar",
-   "downloads": 473740,
+   "downloads": 475609,
    "evidence": {
     "directory": "https://obsidian.md/plugins?id=obsidian-full-calendar",
     "repository": "https://github.com/obsidian-community/obsidian-full-calendar"
@@ -2071,8 +2071,8 @@
   }
  ],
  "basis": {
-  "snapshots": 3,
+  "snapshots": 4,
   "firstWeek": "2026-W43",
-  "plugins": 9827
+  "plugins": 10164
  }
 }
