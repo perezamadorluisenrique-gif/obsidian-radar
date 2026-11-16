@@ -1,11 +1,11 @@
 {
- "fetchedAt": "2026-11-09T14:35:57.669Z",
+ "fetchedAt": "2026-11-16T14:16:36.955Z",
  "source": "https://forum.obsidian.md",
  "requests": 23,
  "failures": 0,
- "topics": 985,
+ "topics": 988,
  "perCategory": {
-  "8": 630,
+  "8": 633,
   "10": 355
  },
  "kept": "new",
